@@ -36,7 +36,7 @@ const FAQWrapper = styled.div`
         justify-content:center;
         list-style: none;
         @media (max-width: 1660px){
-            padding: 40px;
+            padding: 80px;
         }
     }
     @media only screen and (max-width: 768px) {
@@ -49,6 +49,7 @@ const FAQWrapper = styled.div`
             margin-left:1.75rem;
             margin-right:1.75rem;
             margin-top:1rem;
+            padding: 40px;
         }
     }
 `
