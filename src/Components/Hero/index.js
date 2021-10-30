@@ -38,6 +38,15 @@ const Wrapper = styled.div`
             display: block;
             margin-bottom: 40px;
         }
+        @media only screen and (max-width: 768px) {
+            p{
+                font-size:small;
+            }
+            h2{
+                font-size:larger;
+            }
+            
+        }
     }
 `
 

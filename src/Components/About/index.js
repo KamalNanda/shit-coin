@@ -55,6 +55,11 @@ const Wrapper = styled.div`
         margin-bottom: 40px;
         display: block;
     }
+    @media only screen and (max-width: 768px) {
+        p{
+            font-size:medium;
+        }
+    }
 `
 
 const Step = ({data}) => { 

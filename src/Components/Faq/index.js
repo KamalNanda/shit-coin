@@ -35,6 +35,18 @@ const FAQWrapper = styled.div`
         justify-content:center;
         list-style: none
     }
+    @media only screen and (max-width: 768px) {
+        font-size:large;
+        .faq-question{
+            width:unset;
+            padding-left:3%;
+        }
+        .faq-answer{
+            margin-left:1.75rem;
+            margin-right:1.75rem;
+            margin-top:1rem;
+        }
+    }
 `
 
 const Wrapper = styled.div`
@@ -51,7 +63,7 @@ const FAQ = (props) => {
             <p>{props.question}</p>
         </div> 
         {
-            isShow && <ul className="faq-answer">
+            isShow && <ul className="faq-answer ">
             {
                 props.answer.map(answer => {
                     return <li>{answer}</li> 

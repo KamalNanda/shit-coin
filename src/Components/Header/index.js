@@ -18,6 +18,12 @@ const Wrapper = styled.div`
             margin: 0 20px;
         }
     }
+    @media only screen and (max-width: 768px) {
+            span{
+                font-size:smaller;
+            }
+            
+    }
 `
 
 const Hero = () => {
@@ -26,7 +32,7 @@ const Hero = () => {
             <img src={discord} id="discord" alt="discord" />
             <img src={telegram} id="telegram" alt="telegram" />
             <img src={twitter} id="twitter" alt="twitter" />
-            <Button type="small">CONNECT WALLET</Button>
+            <Button type="small"><span>CONNECT WALLET</span></Button>
         </div> 
     </Wrapper>
 }
