@@ -33,7 +33,10 @@ const FAQWrapper = styled.div`
         flex-direction: column;
         align-items:center;
         justify-content:center;
-        list-style: none
+        list-style: none;
+        @media (max-width: 1660px){
+            padding: 40px;
+        }
     }
     @media only screen and (max-width: 768px) {
         font-size:large;
