@@ -1,9 +1,11 @@
 @import url('http://fonts.cdnfonts.com/css/orator-std');
 
+
 @font-face {
 	font-family: 'Orator Std';
 	font-style: normal;
-	src: url('http://fonts.cdnfonts.com/css/orator-std');
+	src: url('./OratorStd.otf');
+	font-display: swap;
 }
 body {
   margin: 0;
