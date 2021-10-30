@@ -19,7 +19,17 @@ const Button = styled.button`
     line-height: ${
         props => props.type === "big"
             ? "36px" : "24px"
-    }
+    };
+    @media only screen and (max-width: 768px) {
+        padding: ${
+            props => props.type === "big"
+                ? "10px 20px" : "7.5px"
+        };
+        font-size: ${
+            props => props.type === "big"
+                ? "15px" : "10px"
+        };
+    };
 `
 
 export default Button
