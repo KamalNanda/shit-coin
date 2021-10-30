@@ -16,13 +16,15 @@ const Wrapper = styled.div`
         margin-left:auto;
         img{
             margin: 0 20px;
+            @media (max-width: 768px){
+                margin: 0 10px;
+            }
         }
     }
     @media only screen and (max-width: 768px) {
             span{
                 font-size:smaller;
             }
-            
     }
 `
 
