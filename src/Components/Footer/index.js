@@ -14,7 +14,7 @@ const FooterWrapper = styled.div`
  	z-index: 9999999; 
 	 .footer-flex{
 	 	display: grid;
-	 	grid-template-columns: repeat(2, 1fr);
+	 	grid-template-columns: repeat(3, 1fr);
 	 	align-items: center;
 	 	grid-gap: 20px;
 	 	width: fit-content;
@@ -48,6 +48,9 @@ function Footer(){
 		<div className="footer-flex">
 			<a href="https://www.discord.com" target="_blank">
 				<img src={'/assets/icons/discord-black.svg'}  alt={"discord"} />
+			</a> 
+			<a href="https://www.telegram.org" target="_blank">
+				<img src={'/assets/icons/telegram-black.svg'}  alt={"telegram"} />
 			</a> 
 			<a href="https://www.twitter.com" target="_blank">
 				<img src={'/assets/icons/twitter-black.svg'}  alt={"twitter"} />
