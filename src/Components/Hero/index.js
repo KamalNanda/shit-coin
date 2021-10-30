@@ -70,7 +70,7 @@ const Hero = () => {
                 <img src={poop} id="poop" alt="poop" />
             </div>
             <h2>$HITCOINS.CHEAP</h2>
-            <p>you’ve never seen shit like this before</p>
+            <p>quality shit like you’ve never seen before!</p>
             <Button type="big">get ready to buy some shit</Button>
             <img id="arrow" src={arrow} alt="alt" />
         </div>
