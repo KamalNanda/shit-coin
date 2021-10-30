@@ -20,7 +20,7 @@ const Wrapper = styled.div`
         font-size: 20px;
         line-height: 24px; 
         width: 36%;
-        @media (max-width:1440px){
+        @media (max-width:768px){
             width: 80%
         }
     }
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
         width: 40%;
         margin-bottom: 20px;
         margin-top: 20px;
-        @media (max-width:1440px){
+        @media (max-width:768px){
             width: 90%
         }
     }
