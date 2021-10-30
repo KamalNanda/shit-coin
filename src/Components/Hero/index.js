@@ -28,15 +28,25 @@ const Wrapper = styled.div`
             text-transform: uppercase;
             margin: 40px 0;
             font-size: 25px;
+            @media(max-width: 1440px){
+                font-size: 18px; 
+            }
         }
         h2{
             font-size: 40px;
             line-height: 48px; 
+            @media(max-width: 1440px){
+                font-size: 32px;
+                line-height: 36px;
+            }
         }
         #arrow{
             margin-top: 60px;
             display: block;
             margin-bottom: 40px;
+            @media(max-width: 1440px){
+                margin-top: 40px;
+            }
         }
         @media only screen and (max-width: 768px) {
             p{
