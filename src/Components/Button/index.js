@@ -19,7 +19,21 @@ const Button = styled.button`
     line-height: ${
         props => props.type === "big"
             ? "36px" : "24px"
-    };
+    }; 
+    @media(max-width: 1440px){
+        padding: ${
+            props => props.type === "big"
+                ? "15px 30px" : "10px"
+        };
+        font-size: ${
+            props => props.type === "big"
+                ? "24px" : "16px"
+        };
+        line-height: ${
+            props => props.type === "big"
+                ? "30px" : "20px"
+        }; 
+    }
     @media only screen and (max-width: 768px) {
         padding: ${
             props => props.type === "big"
@@ -29,6 +43,10 @@ const Button = styled.button`
             props => props.type === "big"
                 ? "15px" : "10px"
         };
+        line-height: ${
+            props => props.type === "big"
+                ? "20px" : "15px"
+        }; 
     };
 `
 
