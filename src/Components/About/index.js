@@ -4,7 +4,8 @@ const arrow = '/assets/icons/arrow-down-black.svg'
 
 const Wrapper = styled.div` 
     background: #F7F7F7;;
-    height:100vh; 
+    min-height:100vh; 
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     color: #141414;
@@ -51,6 +52,7 @@ const Wrapper = styled.div`
     }
     #arrow{
         margin-top: 40px;
+        margin-bottom: 40px;
         display: block;
     }
 `

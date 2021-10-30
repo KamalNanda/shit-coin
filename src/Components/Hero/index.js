@@ -7,9 +7,9 @@ const arrow = '/assets/icons/arrow-down-white.svg'
 
 const Wrapper = styled.div`
     background: #141414;
-    height:100vh; 
+    min-height:100vh;  
     .hero-container{ 
-        height:90vh; 
+        min-height:90vh; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -36,6 +36,7 @@ const Wrapper = styled.div`
         #arrow{
             margin-top: 60px;
             display: block;
+            margin-bottom: 40px;
         }
     }
 `

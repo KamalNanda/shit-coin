@@ -38,6 +38,7 @@ const FAQWrapper = styled.div`
 `
 
 const Wrapper = styled.div`
+    background: #F7F7F7;;
 
 `
 
