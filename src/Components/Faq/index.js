@@ -25,6 +25,7 @@ const FAQWrapper = styled.div`
     .faq-question{
         padding-left: 20%;
         display:flex;
+        align-items:center;
         width: 100%: 
     }
     .faq-answer{
