@@ -19,6 +19,10 @@ const Wrapper = styled.div`
     strong{
         font-size: 20px;
         line-height: 24px; 
+        width: 36%;
+        @media (max-width:1440px){
+            width: 80%
+        }
     }
     .d-flex{
         display: flex;
@@ -26,6 +30,9 @@ const Wrapper = styled.div`
         width: 40%;
         margin-bottom: 20px;
         margin-top: 20px;
+        @media (max-width:1440px){
+            width: 90%
+        }
     }
     .black-cross{
         weight: 40px;
