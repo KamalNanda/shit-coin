@@ -7,7 +7,7 @@ const Button = styled.button`
     font-weight: 400;
     padding: ${
         props => props.type === "big"
-            ? "20px 40px" : "15px"
+            ? "18px 40px" : "13px"
     };
     display:block;
     width: fit-content;
