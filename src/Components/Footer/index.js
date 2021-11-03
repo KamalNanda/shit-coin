@@ -51,7 +51,7 @@ function Footer(){
 				<img src={'/assets/icons/twitter-black.svg'}  alt={"twitter"} />
 			</a> 
 		</div>
-		<p>Copyright 2021 Magic Dust Inc. All Rights Reserved.</p>
+		<p>Copyright 2021 Shitcoins.cheap All Rights Reserved.</p>
 	</FooterWrapper>
 }
 export default Footer
