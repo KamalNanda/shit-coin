@@ -29,7 +29,7 @@ const FAQWrapper = styled.div`
         width: 100%: 
     }
     .faq-answer{
-        min-height: 90vh;
+        min-height: 50vh;
         display:flex;
         flex-direction: column;
         align-items:center;
@@ -68,13 +68,15 @@ const FAQ = (props) => {
             <p>{props.question}</p>
         </div> 
         {
-            isShow && <ul className="faq-answer ">
+            isShow && <div className="faq-answer ">
+                <ul>
             {
                 props.answer.map(answer => {
                     return <li>{answer}</li> 
                 }) 
             }
         </ul>
+        </div>
         } 
     </FAQWrapper>
 }
@@ -84,27 +86,27 @@ const FAQs = () => {
         {
             question: '$hitcoins, cheap!',
             type: 'black',
-            answer: ["Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha"]
+            answer: ["Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha"]
         },
         {
             question: 'How $hitcoins work',
             type: 'white',
-            answer: ["Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha"]
+            answer:["Shitcoins have a unique smart contract with unique features","anti-dump insurance","grow your own network","grow multiple networks simultaneously","merge networks with other shitcoin token holders"]
         },
         {
             question: 'The Infinite Diluting Royalty Smart Contract',
             type: 'black',
-            answer: ["Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha"]
+            answer:["details from toilet (white) paper","NFT set tokenomic","royalties","shitcoin diaspora diagram ","details"]
         },
         {
             question: 'When is $hit happening?',
             type: 'white',
-            answer: ["Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha"]
+            answer:["whitelist open","minting dates (open monthly until sell out)","selling your shitcoin gets a replacement Shithead PFP","Selling your pfp creates a new tangent on your lineage","then we become a DAO","then we fund dreams"]
         },
         {
             question: 'Who made this $hit? ',
             type: 'black',
-            answer: ["Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha","Shitcoins hahahahahaha Shitcoins hahahahahaha Shitcoins hahahahahaha"]
+            answer:["metafive","spacecowboy","rob.eth","pranav" ]
         }
     ]
     return <Wrapper>

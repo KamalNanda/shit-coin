@@ -69,12 +69,18 @@ const Wrapper = styled.div`
     input{
         background: #141414 !important; 
         color:white;
+
         border:none;
         padding:10px;
     }
+form{
+    width:calc(100% - 40px) !important;
+
+}
     input::placeholder{
         color:white;
         z-index:1;
+        text-align: center;
     }
     input:visited{
         border:none !important;
@@ -94,14 +100,31 @@ const Wrapper = styled.div`
 
 const Step = ({data}) => { 
     const [clicked,setclicked] = useState(false)
+    const [email,setemail] = useState('')
     const handleClick = ()=>{
-        setclicked(!clicked);
+        
+            setclicked(!clicked);
+         
     }
+    const handleSubmit = ()=>{
+        alert(email)
+        handleClick();
+    }
+    const handleChange = (e)=>{
+        setemail(e.target.value)
+    }
+    console.log(email)
 return <>
         <strong>Step {data.key}: {data?.title}</strong>
         <div className="d-flex">
             <div className="black" onClick={handleClick} style={{"cursor":"pointer"}}>
-                {data.type==="button"?data?.content:<input type="text" placeholder={data.content} />}
+                {data.type==="button"?data?.content:
+                    data.type==="input"?
+                                    <form onSubmit={handleSubmit}>
+                                    <input type="text" placeholder={data.content} onChange={handleChange} value={email} />
+                                    </form>:
+                                    <span onClick={handleSubmit} >Submit</span>}
+
             </div>
             <div className="black-cross">
                {clicked?<h2>X</h2>:<img  src={cross} alt="cross" />} 
@@ -140,9 +163,11 @@ const About = () => {
             content: "submit",
             isCrossVisible: false,
             key: 4 ,
-            type:"button"
+            type:"submit",
+            
 
         }
+        
     ]
     return <Wrapper>
         <p style={{marginBottom: '60px'}} >

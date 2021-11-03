@@ -109,6 +109,7 @@ const Wrapper = styled.div`
             margin-top: 60px;
             display: block;
             z-index:1;
+            cursor:pointer;
 
             margin-bottom: 40px;
             @media(max-width: 1440px){
@@ -134,6 +135,14 @@ const Wrapper = styled.div`
     }
 `
 
+const handleArrowClick = ()=>{
+    window.scrollTo({
+        top:1000,
+        left:0,
+        behavior:'smooth'
+    })
+}
+
 const Hero = () => {
     return <Wrapper>
             <img src={shit}  className="gif-image" alt="loading..." />
@@ -151,7 +160,7 @@ const Hero = () => {
             <h2>$HITCOINS.<span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
             <p>quality shit like you’ve never seen before!</p>
             <Button type="big">get ready to Start some shit</Button>
-            <img id="arrow" src={arrow} alt="alt" />
+            <img id="arrow" src={arrow} alt="alt" onClick={handleArrowClick}/>
         </div>
     </Wrapper>
 }
