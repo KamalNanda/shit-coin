@@ -21,6 +21,7 @@ const Wrapper = styled.div`
             
         }
 
+
         .social-holder{
             display: flex;
             align-items: center;
@@ -30,8 +31,11 @@ const Wrapper = styled.div`
             img{
                 margin: 0 20px;
                 z-index:111;
+                width:50px;
                 @media (max-width: 768px){
                     margin: 0 10px;
+                        width:35px;
+                    
                 }
             }
         }
@@ -39,6 +43,7 @@ const Wrapper = styled.div`
                 span{
                     font-size:smaller;
                 }
+              
         }
     }
 
@@ -51,7 +56,7 @@ const Wrapper = styled.div`
         z-index:0;
         width:98vw;
         height:106vh;
-        fiter:blur(2px;)
+        fiter:blur(2px);
     }
     .hero-container{ 
         min-height:90vh; 
@@ -81,6 +86,7 @@ const Wrapper = styled.div`
                 margin: 20px 0;
             }
         }
+       
         h2{
             z-index:1;
             font-size:100px !important;
@@ -110,6 +116,13 @@ const Wrapper = styled.div`
             }
         }
         @media only screen and (max-width: 768px) {
+           #arrow{
+               margin-bottom:10rem;
+           }
+          
+           .fkndbE .gif-image{
+               height:84vh !important;
+           }
             p{
                 font-size:small;
             }
@@ -129,7 +142,7 @@ const Hero = () => {
         <div className="social-holder">
            
             <Button type="small"><span>CONNECT WALLET</span></Button>
-            <img src={twitter} width="50"  id="twitter" alt="twitter" />
+            <img src={twitter}  id="twitter" alt="twitter" />
 
         </div> 
         </div>

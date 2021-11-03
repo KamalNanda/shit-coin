@@ -38,11 +38,11 @@ const Button = styled.button`
     @media only screen and (max-width: 768px) {
         padding: ${
             props => props.type === "big"
-                ? "10px 20px" : "7.5px"
+                ? "10px 20px" : "9.5px"
         };
         font-size: ${
             props => props.type === "big"
-                ? "15px" : "10px"
+                ? "15px" : "14px"
         };
         line-height: ${
             props => props.type === "big"
