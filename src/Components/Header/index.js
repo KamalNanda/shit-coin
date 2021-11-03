@@ -10,6 +10,10 @@ const Wrapper = styled.div`
     background: transparent;
     padding-top: 30px;
     padding-right: 45px;
+    img{
+        margin-left: 40px !important;
+        
+    }
     .social-holder{
         display: flex;
         width: fit-content;
@@ -31,10 +35,10 @@ const Wrapper = styled.div`
 const Hero = () => {
     return <Wrapper>
         <div className="social-holder">
-            <img src={discord} id="discord" alt="discord" />
-            <img src={telegram} id="telegram" alt="telegram" />
-            <img src={twitter} id="twitter" alt="twitter" />
+           
             <Button type="small"><span>CONNECT WALLET</span></Button>
+            <img src={twitter} width="50"  id="twitter" alt="twitter" />
+
         </div> 
     </Wrapper>
 }

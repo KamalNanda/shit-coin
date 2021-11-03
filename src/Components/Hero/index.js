@@ -3,18 +3,61 @@ import Header from '../Header'
 import Button from '../Button'
 const shadow = '/assets/images/shadow.png'
 const poop = '/assets/images/poop.png'
+const shit = '/assets/images/shit.gif'
 const arrow = '/assets/icons/arrow-down-white.svg'
+const twitter = '/assets/icons/twitter.svg'
 
 const Wrapper = styled.div`
     background: #141414;
     min-height:100vh;  
+    .nav-header{
+        height:10vh;
+        background: transparent;
+
+        padding-top: 30px;
+        padding-right: 45px;
+        img{
+            margin-left: 40px !important;
+            
+        }
+
+        .social-holder{
+            display: flex;
+            width: fit-content;
+            margin-left:auto;
+            img{
+                margin: 0 20px;
+                @media (max-width: 768px){
+                    margin: 0 10px;
+                }
+            }
+        }
+        @media only screen and (max-width: 768px) {
+                span{
+                    font-size:smaller;
+                }
+        }
+    }
+    .gif-image{
+        opacity:0.8;
+        position:absolute;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%);
+
+        overflow:hidden !important;
+        z-index:0;
+        width:98vw;
+        height:106vh;
+        fiter:blur(2px;)
+    }
     .hero-container{ 
         min-height:90vh; 
+        margin-top:1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         color: white;
+        z-index:-1;
         .hero-img{
             display: flex;
             flex-direction: column;
@@ -25,6 +68,7 @@ const Wrapper = styled.div`
             }
         }
         p{
+            z-index:1;
             text-transform: uppercase;
             margin: 40px 0;
             font-size: 25px;
@@ -34,8 +78,12 @@ const Wrapper = styled.div`
             }
         }
         h2{
-            font-size: 40px;
-            line-height: 48px; 
+            z-index:1;
+            font-size:100px !important;
+            font-weight:800;
+            font-style:normal;
+            font-family:open sans;
+            line-height: 136px; 
             @media(max-width: 1440px){
                 font-size: 32px;
                 line-height: 36px;
@@ -44,6 +92,8 @@ const Wrapper = styled.div`
         #arrow{
             margin-top: 60px;
             display: block;
+            z-index:1;
+
             margin-bottom: 40px;
             @media(max-width: 1440px){
                 margin-top: 20px;
@@ -63,13 +113,19 @@ const Wrapper = styled.div`
 
 const Hero = () => {
     return <Wrapper>
-        <Header />
+            <img src={shit}  className="gif-image" alt="loading..." />
+
+        <div className="nav-header">
+        <div className="social-holder">
+           
+            <Button type="small"><span>CONNECT WALLET</span></Button>
+            <img src={twitter} width="50"  id="twitter" alt="twitter" />
+
+        </div> 
+        </div>
         <div className="hero-container">
-            <div className="hero-img">
-                <img src={shadow} id="shadow" alt="shadow" />
-                <img src={poop} id="poop" alt="poop" />
-            </div>
-            <h2>$HITCOINS.CHEAP</h2>
+           
+            <h2>$HITCOINS.<span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
             <p>quality shit like you’ve never seen before!</p>
             <Button type="big">get ready to buy some shit</Button>
             <img id="arrow" src={arrow} alt="alt" />

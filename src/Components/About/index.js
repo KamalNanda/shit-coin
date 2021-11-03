@@ -1,5 +1,7 @@
+import {useState} from 'react'
 import styled from 'styled-components' 
 const cross = '/assets/icons/cross.svg'
+
 const arrow = '/assets/icons/arrow-down-black.svg'
 
 const Wrapper = styled.div` 
@@ -70,14 +72,18 @@ const Wrapper = styled.div`
 `
 
 const Step = ({data}) => { 
-    return <>
+    const [clicked,setclicked] = useState(false)
+    const handleClick = ()=>{
+        setclicked(!clicked);
+    }
+return <>
         <strong>Step {data.key}: {data?.title}</strong>
         <div className="d-flex">
-            <div className="black">
+            <div className="black" onClick={handleClick} style={{"cursor":"pointer"}}>
                 {data?.content}
             </div>
             <div className="black-cross">
-                <img style={{visibility : data?.isCrossVisible === true ? "unset" : "hidden"}} src={cross} alt="cross" />
+               {clicked?<h2>X</h2>:<img style={{visibility : data?.isCrossVisible === true ? "unset" : "hidden"}} src={cross} alt="cross" />} 
             </div>
         </div>
     </>

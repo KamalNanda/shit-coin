@@ -5,6 +5,7 @@ const Button = styled.button`
     border: 5px solid #FFFFFF;
     box-sizing: border-box;
     font-weight: 400;
+    z-index:1;
     padding: ${
         props => props.type === "big"
             ? "18px 40px" : "13px"
