@@ -46,13 +46,9 @@ const FooterWrapper = styled.div`
 function Footer(){
 	return <FooterWrapper> 
 		<div className="footer-flex">
-			<a href="https://www.discord.com" target="_blank">
-				<img src={'/assets/icons/discord-black.svg'}  alt={"discord"} />
-			</a> 
-			<a href="https://www.telegram.org" target="_blank">
-				<img src={'/assets/icons/telegram-black.svg'}  alt={"telegram"} />
-			</a> 
-			<a href="https://www.twitter.com" target="_blank">
+			
+			
+<a href="https://www.twitter.com" target="_blank">
 				<img src={'/assets/icons/twitter-black.svg'}  alt={"twitter"} />
 			</a> 
 		</div>
