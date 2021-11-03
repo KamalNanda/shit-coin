@@ -13,7 +13,6 @@ const FooterWrapper = styled.div`
  	justify-content: space-evenly;
  	z-index: 9999999; 
 	 .footer-flex{
-	 	display: grid;
 	 	grid-template-columns: repeat(3, 1fr);
 	 	align-items: center;
 	 	grid-gap: 20px;

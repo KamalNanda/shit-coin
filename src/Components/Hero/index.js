@@ -4,7 +4,7 @@ import Button from '../Button'
 const shadow = '/assets/images/shadow.png'
 const poop = '/assets/images/poop.png'
 const shit = '/assets/images/shit.gif'
-const arrow = '/assets/icons/arrow-down-white.svg'
+const arrow = '/assets/images/Arrow 16.png'
 const twitter = '/assets/icons/twitter.svg'
 
 const Wrapper = styled.div`
@@ -23,10 +23,13 @@ const Wrapper = styled.div`
 
         .social-holder{
             display: flex;
+            align-items: center;
+
             width: fit-content;
             margin-left:auto;
             img{
                 margin: 0 20px;
+                z-index:111;
                 @media (max-width: 768px){
                     margin: 0 10px;
                 }
@@ -38,6 +41,7 @@ const Wrapper = styled.div`
                 }
         }
     }
+
     .gif-image{
         opacity:0.8;
         position:absolute;
@@ -88,6 +92,12 @@ const Wrapper = styled.div`
                 font-size: 32px;
                 line-height: 36px;
             }
+            @media only screen and (max-width: 768px){
+                h2{
+                    font-size:50px;
+                    line-height: unset;
+                }
+            }
         }
         #arrow{
             margin-top: 60px;
@@ -104,7 +114,7 @@ const Wrapper = styled.div`
                 font-size:small;
             }
             h2{
-                font-size:larger;
+                font-size:xx-large !important;
             }
             
         }
@@ -127,7 +137,7 @@ const Hero = () => {
            
             <h2>$HITCOINS.<span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
             <p>quality shit like you’ve never seen before!</p>
-            <Button type="big">get ready to buy some shit</Button>
+            <Button type="big">get ready to Start some shit</Button>
             <img id="arrow" src={arrow} alt="alt" />
         </div>
     </Wrapper>

@@ -5,7 +5,7 @@ const cross = '/assets/icons/cross.svg'
 const arrow = '/assets/icons/arrow-down-black.svg'
 
 const Wrapper = styled.div` 
-    background: #F7F7F7;;
+    background: #F7F7F7;
     min-height:100vh; 
     padding-top: 100px;
     display: flex;
@@ -18,12 +18,19 @@ const Wrapper = styled.div`
         font-size: 25px;
         line-height: 45px;
     }
+    h2{
+        color:white;
+        font-size:30px;
+        background:black;
+        padding-left:5px;
+        padding-right:5px;
+    }
     strong{
         font-size: 20px;
         line-height: 24px; 
         width: 36%;
         @media (max-width:768px){
-            width: 80%
+            width: 80%;
         }
     }
     .d-flex{
@@ -59,6 +66,20 @@ const Wrapper = styled.div`
         text-align: center;
         color: white; 
     }
+    input{
+        background: #141414 !important; 
+        color:white;
+        border:none;
+        padding:10px;
+    }
+    input::placeholder{
+        color:white;
+        z-index:1;
+    }
+    input:visited{
+        border:none !important;
+
+    }
     #arrow{
         margin-top: 40px;
         margin-bottom: 40px;
@@ -80,40 +101,47 @@ return <>
         <strong>Step {data.key}: {data?.title}</strong>
         <div className="d-flex">
             <div className="black" onClick={handleClick} style={{"cursor":"pointer"}}>
-                {data?.content}
+                {data.type==="button"?data?.content:<input type="text" placeholder={data.content} />}
             </div>
             <div className="black-cross">
-               {clicked?<h2>X</h2>:<img style={{visibility : data?.isCrossVisible === true ? "unset" : "hidden"}} src={cross} alt="cross" />} 
+               {clicked?<h2>X</h2>:<img  src={cross} alt="cross" />} 
             </div>
         </div>
     </>
 }
-
+//style={{visibility : data?.isCrossVisible === true ? "unset" : "hidden"}}
 const About = () => {
     const list = [
         {
             title : "connect your wallet",
             content: "connect wallet",
             isCrossVisible: true,
-            key: 1 
+            key: 1 ,
+            type:"button"
         },
         {
             title : "connect your twitter",
             content: "connect twitter",
             isCrossVisible: false,
-            key: 2 
+            key: 2,
+            type:"button"
+ 
         },
         {
             title : "drop an email",
             content: "[ TYPE EMAIL ]",
             isCrossVisible: false,
-            key: 3 
+            key: 3,
+            type:"input"
+ 
         },
         {
             title : "submit",
             content: "submit",
             isCrossVisible: false,
-            key: 4 
+            key: 4 ,
+            type:"button"
+
         }
     ]
     return <Wrapper>
