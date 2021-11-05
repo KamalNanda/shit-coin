@@ -1,5 +1,6 @@
-import {useState} from 'react'
-import styled from 'styled-components' 
+import { useState } from 'react'
+import styled from 'styled-components'
+import firebase from "../firebase"
 const cross = '/assets/icons/cross.svg'
 
 const arrow = '/assets/icons/arrow-down-black.svg'
@@ -25,6 +26,12 @@ const Wrapper = styled.div`
         padding-left:5px;
         padding-right:5px;
     }
+    form{
+        width:100% !important;
+    }
+    .w-100{
+        width:100% !important; 
+    }
     strong{
         font-size: 20px;
         line-height: 24px; 
@@ -32,6 +39,13 @@ const Wrapper = styled.div`
         @media (max-width:768px){
             width: 80%;
         }
+    }
+    ::placeholder{
+        font-size:larger;
+        text-align:center;
+    }
+    :-ms-input-placeholder { 
+        font-size:larger;
     }
     .d-flex{
         display: flex;
@@ -69,14 +83,13 @@ const Wrapper = styled.div`
     input{
         background: #141414 !important; 
         color:white;
-
+        width:100%;
         border:none;
         padding:10px;
+        text-align: center;
+        font-size:18px;
     }
-form{
-    width:calc(100% - 40px) !important;
 
-}
     input::placeholder{
         color:white;
         z-index:1;
@@ -90,6 +103,7 @@ form{
         margin-top: 40px;
         margin-bottom: 40px;
         display: block;
+        cursor:pointer;
     }
     @media only screen and (max-width: 768px) {
         p{
@@ -98,98 +112,147 @@ form{
     }
 `
 
-const Step = ({data}) => { 
-    const [clicked,setclicked] = useState(false)
-    const [email,setemail] = useState('')
-    const handleClick = ()=>{
-        
-            setclicked(!clicked);
-         
+const Step = ({ data }) => {
+    const [clicked, setclicked] = useState(false)
+    const [signin, setsignin] = useState(false)
+
+
+    const handlesignin = () => {
+
+        setsignin(true);
+
     }
-    const handleSubmit = ()=>{
-        alert(email)
-        handleClick();
+    const Signin = () => {
+        var Twitter_provider = new firebase.auth.TwitterAuthProvider();
+        firebase.auth().signInWithPopup(Twitter_provider)
+            .then((re) => {
+                handlesignin();
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
-    const handleChange = (e)=>{
-        setemail(e.target.value)
+    const handleClick = () => {
+
+        setclicked(!clicked);
+
     }
-    console.log(email)
-return <>
+
+    return <>
         <strong>Step {data.key}: {data?.title}</strong>
         <div className="d-flex">
-            <div className="black" onClick={handleClick} style={{"cursor":"pointer"}}>
-                {data.type==="button"?data?.content:
-                    data.type==="input"?
-                                    <form onSubmit={handleSubmit}>
-                                    <input type="text" placeholder={data.content} onChange={handleChange} value={email} />
-                                    </form>:
-                                    <span onClick={handleSubmit} >Submit</span>}
+            <div className="black" onClick={handleClick} style={{ "cursor": "pointer" }}>
+                {data.type === "button" ? data?.content : signin ? <span>Twitter Connected</span> : <span onClick={Signin}>Connect Twitter</span>}
+
 
             </div>
             <div className="black-cross">
-               {clicked?<img  src={cross} alt="cross" />:<h2 style={{"color":"black"}}>X</h2>} 
+                {clicked ? <img src={cross} alt="cross" /> : <h2 style={{ "color": "black" }}>X</h2>}
             </div>
         </div>
     </>
 }
 //style={{visibility : data?.isCrossVisible === true ? "unset" : "hidden"}}
 const About = () => {
+    const [email, setemail] = useState('')
+    const [clicked, setclicked] = useState(false)
+
+    const handleclick = ()=>{
+        setclicked(!clicked)
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        alert(email)
+        handleclick()
+
+    }
+    const handleChange = (e) => {
+        setemail(e.target.value)
+        if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/.test(e.target.value)) {
+            handleclick()
+        }
+    }
     const list = [
         {
-            title : "connect your wallet",
+            title: "connect your wallet",
             content: "connect wallet",
             isCrossVisible: false,
-            key: 1 ,
-            type:"button"
+            key: 1,
+            type: "button"
         },
         {
-            title : "connect your twitter",
+            title: "connect your twitter",
             content: "connect twitter",
             isCrossVisible: false,
             key: 2,
-            type:"button"
- 
-        },
-        {
-            title : "drop an email",
-            content: "[ TYPE EMAIL ]",
-            isCrossVisible: false,
-            key: 3,
-            type:"input"
- 
-        },
-        {
-            title : "submit",
-            content: "submit",
-            isCrossVisible: false,
-            key: 4 ,
-            type:"submit",
-            
+            type: "twitter"
 
-        }
-        
+        },
+        // {
+        //     title : "drop an email",
+        //     content: "[ TYPE EMAIL ]",
+        //     isCrossVisible: false,
+        //     key: 3,
+        //     type:"input"
+
+        // },
+        // {
+        //     title : "submit",
+        //     content: "submit",
+        //     isCrossVisible: false,
+        //     key: 4 ,
+        //     type:"submit",
+
+
+        // }
+
     ]
-    const handleArrowClick = ()=>{
+    const handleArrowClick = () => {
         window.scrollTo({
-            top:1500,
-            left:0,
-            behavior:'smooth'
+            top: 1500,
+            left: 0,
+            behavior: 'smooth'
         })
     }
     return <Wrapper>
-        <p style={{marginBottom: '60px'}} >
-            Welcome $hitheads, to join the shitlist 
-            <br/>you must follow these steps and then 
-            <br/>wait until we’re good and ready. 
-        </p> 
+        <p style={{ marginBottom: '60px' }} >
+            Welcome $hitheads, to join the shitlist
+            <br />you must follow these steps and then
+            <br />wait until we’re good and ready.
+        </p>
         {
-            list.map( (li) => { 
+            list.map((li) => {
                 return <Step data={li} />
             })
         }
-        <p  style={{marginTop: "40px"}}>now read all about this shit</p>
+        <div className="d-flex align-items-center justify-content-center" >
+        <form onSubmit={handleSubmit}>
+            <strong>&nbsp;&nbsp;Step 3: Drop an Email</strong>
+            
+            <div className="d-flex w-100">
+                <div className="black">
+                    <input type="email" placeholder="[ TYPE EMAIL ]" onChange={handleChange} value={email} />
+                </div>
+                <div className="black-cross">
+                {clicked ? <img src={cross} alt="cross" /> : <h2 style={{ "color": "black" }}>X</h2>}
+                 </div>
+            </div>
+            <strong>&nbsp;&nbsp;Step 4: Submit</strong>
+            
+            <div className="d-flex w-100">
+                <div className="black">
+                    <input type="submit" placeholder="Submit" />
+                </div>
+                <div className="black-cross">
+                {clicked ? <img src={cross} alt="cross" /> : <h2 style={{ "color": "black" }}>X</h2>}
+                 </div>
+            </div>
+        </form>
+        </div>
+        
+        <p style={{ marginTop: "40px" }}>now read all about this shit</p>
         <img id="arrow" src={arrow} onClick={handleArrowClick} alt="alt" />
     </Wrapper>
 }
 
-export default About 
+export default About

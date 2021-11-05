@@ -8,13 +8,16 @@ const FAQWrapper = styled.div`
         props => props.type === "black" 
             ? "#141414" : "#F7F7F7"
     };
+    
     font-size: 25px;
     line-height: 30px;
     padding: 25px;
+    
     color: ${
         props => props.type === "black" 
             ? "white" : "#141414" 
     };
+    
     .arrow-img{
         margin-right: 20px;
         cursor: pointer; 
@@ -23,7 +26,7 @@ const FAQWrapper = styled.div`
         transform: rotateZ(-90deg);
     }
     .faq-question{
-        padding-left: 20%;
+        padding-left: 30%;
         display:flex;
         align-items:center;
         width: 100%: 
@@ -63,7 +66,7 @@ const FAQ = (props) => {
     const [isShow, setShow] = useState(false)
     const toggleShow = () => setShow(!isShow)
     return <FAQWrapper type={props.type}>
-        <div className="faq-question">
+        <div className="faq-question d-flex align-items-center justify-content-center">
             <img src={props.type === "white" ? arrowBlack : arrowWhite} onClick={toggleShow} className={`arrow-img ${isShow ? "" : "arrow-right"}`} />
             <p>{props.question}</p>
         </div> 

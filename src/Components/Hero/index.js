@@ -92,7 +92,7 @@ const Wrapper = styled.div`
         p{
             z-index:1;
             text-transform: uppercase;
-            margin: 40px 0;
+            margin: 20px 0 40px 0;
             font-size: 25px;
             @media(max-width: 1440px){
                 font-size: 18px; 
@@ -173,7 +173,7 @@ const Hero = () => {
         <div className="hero-container">
            
             <h2>$HITCOINS.<span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
-            <p>quality shit like you’ve never seen before!</p>
+            <p>you’ve never seen shit like this before!</p>
             <Button type="big" onClick={handleArrowClick}>get ready to Start some shit</Button>
             <img id="arrow" src={arrow} alt="alt" onClick={handleArrowClick}/>
         </div>
