@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const Button = styled.button`
     background: #141414;
     border: 5px solid #FFFFFF;
+    cursor:pointer;
     box-sizing: border-box;
     font-weight: 400;
     z-index:1;
@@ -32,7 +33,7 @@ const Button = styled.button`
         };
         line-height: ${
             props => props.type === "big"
-                ? "30px" : "20px"
+                ? "" : ""
         }; 
     }
     @media only screen and (max-width: 768px) {

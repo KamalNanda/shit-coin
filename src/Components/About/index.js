@@ -127,7 +127,7 @@ return <>
 
             </div>
             <div className="black-cross">
-               {clicked?<h2>X</h2>:<img  src={cross} alt="cross" />} 
+               {clicked?<img  src={cross} alt="cross" />:<h2 style={{"color":"black"}}>X</h2>} 
             </div>
         </div>
     </>
@@ -138,7 +138,7 @@ const About = () => {
         {
             title : "connect your wallet",
             content: "connect wallet",
-            isCrossVisible: true,
+            isCrossVisible: false,
             key: 1 ,
             type:"button"
         },
@@ -169,6 +169,13 @@ const About = () => {
         }
         
     ]
+    const handleArrowClick = ()=>{
+        window.scrollTo({
+            top:1500,
+            left:0,
+            behavior:'smooth'
+        })
+    }
     return <Wrapper>
         <p style={{marginBottom: '60px'}} >
             Welcome $hitheads, to join the shitlist 
@@ -181,7 +188,7 @@ const About = () => {
             })
         }
         <p  style={{marginTop: "40px"}}>now read all about this shit</p>
-        <img id="arrow" src={arrow} alt="alt" />
+        <img id="arrow" src={arrow} onClick={handleArrowClick} alt="alt" />
     </Wrapper>
 }
 
