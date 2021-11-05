@@ -48,6 +48,8 @@ const FAQWrapper = styled.div`
         .faq-question{
             width:unset;
             padding-left:3%;
+            line-height:unset;
+            font-size:small;
         }
         .faq-answer{
             margin-left:1.75rem;

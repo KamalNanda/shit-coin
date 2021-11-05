@@ -9,7 +9,7 @@ const twitter = '/assets/icons/twitter.svg'
 
 const Wrapper = styled.div`
     background: #141414;
-    min-height:100vh;
+    height:106vh;
     .overlay{  
     position: absolute;
     top: 0;
@@ -18,7 +18,10 @@ const Wrapper = styled.div`
     background: black;
     opacity: 0.6;
     width: 100%;
-    }  
+        @media only screen and (max-width: 768px) {
+            // height:107vh;
+        }
+}  
     .nav-header{
         height:10vh;
         background: transparent;
@@ -49,9 +52,11 @@ const Wrapper = styled.div`
             }
         }
         @media only screen and (max-width: 768px) {
-                span{
+            padding-right:10px;    
+            span{
                     font-size:smaller;
                 }
+
               
         }
     }
@@ -68,6 +73,7 @@ const Wrapper = styled.div`
         fiter:blur(2px);
         @media only screen and (max-width: 768px){
             object-fit:cover;
+            // height:107vh;
         }
     }
  
@@ -132,8 +138,12 @@ const Wrapper = styled.div`
             }
           }
         @media only screen and (max-width: 768px) {
+            .nav-header{
+                padding-right:5px !important;
+            }
            #arrow{
                margin-bottom:10rem;
+               margin-top:2rem;
            }
           
            .fkndbE .gif-image{
@@ -141,9 +151,11 @@ const Wrapper = styled.div`
            }
             p{
                 font-size:small;
+                margin-bottom:29px;
             }
             h2{
                 font-size:xx-large !important;
+                line-height: unset;
             }
             
         }

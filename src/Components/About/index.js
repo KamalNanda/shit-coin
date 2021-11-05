@@ -15,6 +15,9 @@ const Wrapper = styled.div`
     color: #141414;
     align-items: center;
     justify-content: center;
+    .w-100{
+        width:100%;
+    }
     p{
         text-align: center;
         font-size: 25px;
@@ -38,7 +41,10 @@ const Wrapper = styled.div`
         line-height: 24px; 
         width: 36%;
         @media (max-width:768px){
-            width: 80%;
+            width: 90%;
+            font-size:medium;
+            margin-top:10px;
+            margin-bottom:10px;
         }
     }
     ::placeholder{
@@ -59,7 +65,6 @@ const Wrapper = styled.div`
         }
     }
     .black-cross{
-        weight: 40px;
         height: 40px;
         background: #141414;
         display: flex;  
@@ -84,6 +89,17 @@ const Wrapper = styled.div`
             box-shadow: 0px 15px 20px #141414;
             transform: translateY(-7px);
         }
+    }
+    .black-input{
+        
+            background: #141414; 
+            height: 40px;
+            width: calc(100% - 40px);
+            display: flex;  
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
     }
     input{
         background: #141414 !important; 
@@ -116,6 +132,10 @@ const Wrapper = styled.div`
     @media only screen and (max-width: 768px) {
         p{
             font-size:medium;
+        }
+        .l-normal{
+            line-height:normal;
+            font-size:small;
         }
     }
 `
@@ -150,7 +170,7 @@ const Step = ({ data }) => {
         <strong>Step {data.key}: {data?.title}</strong>
         <div className="d-flex">
             <div className="black" onClick={handleClick} style={{ "cursor": "pointer" }}>
-                {data.type === "button" ? data?.content : signin ? <span>Twitter Connected</span> : <span onClick={Signin}>Connect Twitter</span>}
+                {data.type === "button" ? data?.content : signin ? <span>Twitter Connected</span> : <div className="w-100"onClick={Signin}>Connect Twitter</div>}
 
 
             </div>
@@ -230,7 +250,7 @@ const About = () => {
         })
     }
     return <Wrapper>
-        <p style={{ marginBottom: '60px' }} >
+        <p style={{ marginBottom: '60px' }} className="l-normal">
             Welcome $hitheads, to join the shitlist
             <br />you must follow these steps and then
             <br />wait until we’re good and ready.
@@ -245,7 +265,7 @@ const About = () => {
             <strong>&nbsp;&nbsp;Step 3: Drop an Email</strong>
             
             <div className="d-flex w-100">
-                <div className="black">
+                <div className="black-input">
                     <input type="email" placeholder="[ TYPE EMAIL ]" onChange={handleChange} value={email} />
                     
                 </div>

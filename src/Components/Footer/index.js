@@ -34,10 +34,10 @@ const FooterWrapper = styled.div`
 	@media(max-width:  768px){
 	 	padding: 20px;
 		img{
-			width: 40px;
+			width: 30px !important;
 		} 
 		p{
-			font-size: 18px;
+			font-size: small;
 		} 
 }
 `
