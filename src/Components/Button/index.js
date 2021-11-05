@@ -36,6 +36,10 @@ const Button = styled.button`
                 ? "" : ""
         }; 
     }
+    :hover{
+        box-shadow: 0px 15px 20px #141414;
+        transform: translateY(-7px);
+    }
     @media only screen and (max-width: 768px) {
         padding: ${
             props => props.type === "big"

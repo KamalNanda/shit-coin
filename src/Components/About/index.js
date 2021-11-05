@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import firebase from "../firebase"
+import validator from "validator"
 const cross = '/assets/icons/cross.svg'
 
 const arrow = '/assets/icons/arrow-down-black.svg'
@@ -79,6 +80,10 @@ const Wrapper = styled.div`
         justify-content: center;
         text-align: center;
         color: white; 
+        :hover{
+            box-shadow: 0px 15px 20px #141414;
+            transform: translateY(-7px);
+        }
     }
     input{
         background: #141414 !important; 
@@ -88,6 +93,9 @@ const Wrapper = styled.div`
         padding:10px;
         text-align: center;
         font-size:18px;
+    }
+    .mb-1{
+        margin-bottom:10px;
     }
 
     input::placeholder{
@@ -156,6 +164,7 @@ const Step = ({ data }) => {
 const About = () => {
     const [email, setemail] = useState('')
     const [clicked, setclicked] = useState(false)
+    const [errmessage, seterrmessage] = useState("")
 
     const handleclick = ()=>{
         setclicked(!clicked)
@@ -168,9 +177,15 @@ const About = () => {
     }
     const handleChange = (e) => {
         setemail(e.target.value)
-        if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/.test(e.target.value)) {
-            handleclick()
+        if(e.target.value===""){
+            seterrmessage("")
         }
+        else if (validator.isEmail(e.target.value)) {
+            seterrmessage('Valid Email :)')
+          } 
+        else {
+            seterrmessage('Enter valid Email!')
+          }
     }
     const list = [
         {
@@ -232,11 +247,15 @@ const About = () => {
             <div className="d-flex w-100">
                 <div className="black">
                     <input type="email" placeholder="[ TYPE EMAIL ]" onChange={handleChange} value={email} />
+                    
                 </div>
                 <div className="black-cross">
                 {clicked ? <img src={cross} alt="cross" /> : <h2 style={{ "color": "black" }}>X</h2>}
                  </div>
+
             </div>
+            <div className="mb-1">{errmessage}</div>
+
             <strong>&nbsp;&nbsp;Step 4: Submit</strong>
             
             <div className="d-flex w-100">

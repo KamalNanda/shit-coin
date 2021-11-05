@@ -35,11 +35,12 @@ const FAQWrapper = styled.div`
         min-height: 50vh;
         display:flex;
         flex-direction: column;
-        align-items:center;
+        align-items:start;
         justify-content:center;
         list-style: none;
         @media (max-width: 1660px){
             padding: 80px;
+            padding-left: 20%;
         }
     }
     @media only screen and (max-width: 768px) {
@@ -52,7 +53,7 @@ const FAQWrapper = styled.div`
             margin-left:1.75rem;
             margin-right:1.75rem;
             margin-top:1rem;
-            padding: 40px;
+            padding: 20px;
         }
     }
 `
