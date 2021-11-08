@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "shitcoin-11e79",
+  "private_key_id": "d8b5c4390886493232f2bef22b889d5fdb7c3fac",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDMk7MJzXF9jXqO\n3dMOV5YW/h57qJxafqdYqOkz3RwVNwMjcEm8vkNxynGHkV50LMY3DGx8o+Iv6LU/\nH00a410iFEkSHKMxP7gIdkYzgycnSf2yfixvkzWgvdLiB1ooCV2jtAPjarYh180b\n0XMMmo9lGFPKTXnK0Iyxik7Ifm0Mrc821VCtGvSR/kdLwHOPP1NzptCXSZo/Tg9l\niSekQ/c6K1pSVE7/xXAoYbbjnL+KjpwRAT6HVbN5SgjMml1uLtaoMOh5E0Of9hnq\nDqQiOHcoNa5c3hsA9MYbca+TCsI12q9ATsdBafvv01lKOepVKu5VCOK4nAtcJnjT\nKFA1yNRlAgMBAAECggEAYAbSav8Czy7aQPZxy9EkFA3bbCsknTvHPJAoyt32gSTN\n9dQO4Kgki2S97qc3QWwE7LEJuWXJ1bgzX3pHXKAtxsHj3LsRhRwGO/6cjDB7b+9E\nxQSBwivE5/tCYjOWR6XBzQZCLv0XmgIsdmrVyKxCM+974UGFskQ7TlkACw+BC4ow\n1uH7wbliDlNGcUnjLlU0lsOgj1lUtIGF/2WGtQcu/cUzcnjpjCxg+Gc2BTbOXRWZ\nqZKvMNtcsxtzjK4Cu2GnOjsjjntD+rno9D4JiEJeWDU2NFC8Qa4OVkODjwl8CDrT\n0FuWlVa6jA++iJyE/RVHDVLMS41P9SIwFcjf1dbkTwKBgQD4/qYpMWfDmjNVbURr\nYBoXX9heQVABtAp8ew81t00qkb837iBiKR7/EsbLhGcMkCFECBh6Tj/VdVkoDpgQ\nnLuzkCOEFmJJ47O7Zoxfp77OGGlsXhms1wCo02jzboue+g7auGXqxN6Pj6ymUXDu\nTGVctlas42eGjpa8UBh8vgw3xwKBgQDSVSMlCf1Mhh9L9NetH/4LMOskSBH0EZjX\n6JywEPk2bboctdhga2YvAKycvElfC5ZG4L/ZnjhV9DHdqGvzUnFuIf1blY01a2fG\nNv1i9GHlhfRsfYaZPhPJfqBii5ZEfn4bspOPFwuBY9KkzhxAdrepdPjGMEQJ89pl\n3ps5TvIKcwKBgAr47cmS68eq2+g/0GwK6BtvldFRf30TugKSSbFMSpI9qfeE/thU\nh5El+qytQP1EvLKKyMla+WUmrq8dNYZF4d+f0nDXq60l4522fykX80iRutOTsf3z\n24uVBWL01CJFUrJAvf0Cf+xDoJATtq5Jn43eWyNzQfSkA/B4dxvIJDGxAoGAJ8Rv\nE6ay3JATRMIzMQl2d9k07DQwKMxW8KOLVIKxC8htQtZi5cAInuRqvmufF7hSHm6J\n93RBxIaaEwWv+15gEemdRH6fJzV6dnCZMedwxvuvvf9xvnGNPjCR1G/95k9gOo5l\n9czuoPUls4FAuDN6ADEchCRGCPexGEehY5F4k98CgYBOqaVi9vLQkZ7vOkGeN+pR\nbXhBu0EWQT2uytVsk1Pvc8b9KdSfLzMnOzrnnIi235ifIHXpP+V9tOvNwNomeX9K\nfUGx7kEUmw7u20MVVZ2maFLKBdejq3U4qPPH2S8bxzFxp/qCs94by2GDgp6Gto8B\n3rFaQE3focp3tn7MM2dTew==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-to-sheets@shitcoin-11e79.iam.gserviceaccount.com",
+  "client_id": "115820195705239013428",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-to-sheets%40shitcoin-11e79.iam.gserviceaccount.com"
+}

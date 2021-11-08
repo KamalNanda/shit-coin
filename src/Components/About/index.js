@@ -143,6 +143,35 @@ const Wrapper = styled.div`
 const Step = ({ data }) => {
     const [clicked, setclicked] = useState(false)
     const [signin, setsignin] = useState(false)
+    const [errmessage,seterrmessage] = useState(null)
+    const [defaultAccount,setdefaultaccount]  = useState(null)
+    const [userBalance,setuserbalance] = useState(null)
+
+
+    const connectWalletHandler = () => {
+        if(window.ethereum){
+            window.ethereum.request({method: 'eth_requestAccounts'})
+            .then(result=>{
+                accountChangedHandler(result[0])
+            })
+
+        }
+        else{
+            alert("install metamask in your browser")
+        }
+    }
+    const accountChangedHandler = (newAccount) => {
+        setdefaultaccount(newAccount)
+        getUserBalance(newAccount)
+
+    }
+    const getUserBalance = (address)=>{
+            window.ethereum.request({method: 'eth_getBalance',params:[address, 'latest']})
+            .then(balance=>{
+                setuserbalance(balance)
+                console.log(balance)
+            })
+    }
 
 
     const handlesignin = () => {
@@ -170,7 +199,7 @@ const Step = ({ data }) => {
         <strong>Step {data.key}: {data?.title}</strong>
         <div className="d-flex">
             <div className="black" onClick={handleClick} style={{ "cursor": "pointer" }}>
-                {data.type === "button" ? data?.content : signin ? <span>Twitter Connected</span> : <div className="w-100"onClick={Signin}>Connect Twitter</div>}
+                {data.type === "button" ? defaultAccount?<span>Wallet Connected</span>:<span onClick={connectWalletHandler}>{data?.content} </span>: signin ? <span>Twitter Connected</span> : <div className="w-100"onClick={Signin}>Connect Twitter</div>}
 
 
             </div>
