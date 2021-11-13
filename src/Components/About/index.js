@@ -9,7 +9,9 @@ const arrow = '/assets/icons/arrow-down-black.svg'
 const Wrapper = styled.div` 
     background: #F7F7F7;
     min-height:100vh; 
-    padding-top: 100px;
+    padding-top: 51px;
+    padding-left:30px;
+    padding-right:30px;
     display: flex;
     flex-direction: column;
     color: #141414;
@@ -42,9 +44,11 @@ const Wrapper = styled.div`
         width: 36%;
         @media (max-width:768px){
             width: 90%;
-            font-size:medium;
-            margin-top:10px;
-            margin-bottom:10px;
+            font-size:13px;
+            // margin-top:10px;
+            // margin-bottom:10px;
+            line-height:32px;
+            font-weight:900;
         }
     }
     ::placeholder{
@@ -79,7 +83,7 @@ const Wrapper = styled.div`
     .black{
         background: #141414; 
         height: 40px;
-        width: calc(100% - 40px);
+        width: calc(100% - 50px);
         display: flex;  
         align-items: center;
         justify-content: center;
@@ -89,17 +93,21 @@ const Wrapper = styled.div`
             box-shadow: 0px 15px 20px #141414;
             transform: translateY(-7px);
         }
+        
     }
     .black-input{
         
             background: #141414; 
             height: 40px;
-            width: calc(100% - 40px);
+            width: calc(100% - 50px);
             display: flex;  
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
+    }
+    .mt-0{
+        margin-top:0 ;
     }
     input{
         background: #141414 !important; 
@@ -134,8 +142,8 @@ const Wrapper = styled.div`
             font-size:medium;
         }
         .l-normal{
-            line-height:normal;
-            font-size:small;
+            line-height:45px;
+            font-size:12px;
         }
     }
 `
@@ -204,7 +212,7 @@ const Step = ({ data }) => {
 
             </div>
             <div className="black-cross">
-                {clicked ? <img src={cross} alt="cross" /> : <h2 style={{ "color": "black" }}>X</h2>}
+                {clicked ? <img src={cross} alt="cross" /> : <img src={cross} alt="cross" style={{"visibility": "hidden"}}/>}
             </div>
         </div>
     </>
@@ -279,7 +287,7 @@ const About = () => {
         })
     }
     return <Wrapper>
-        <p style={{ marginBottom: '60px' }} className="l-normal">
+        <p style={{ marginBottom: '19px' }} className="l-normal">
             Welcome $hitheads, to join the shitlist
             <br />you must follow these steps and then
             <br />wait until we’re good and ready.
@@ -289,7 +297,7 @@ const About = () => {
                 return <Step data={li} />
             })
         }
-        <div className="d-flex align-items-center justify-content-center" >
+        <div className="d-flex align-items-center justify-content-center mt-0" >
         <form onSubmit={handleSubmit}>
             <strong>&nbsp;&nbsp;Step 3: Drop an Email</strong>
             

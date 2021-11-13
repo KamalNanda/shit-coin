@@ -9,17 +9,17 @@ const twitter = '/assets/icons/twitter.svg'
 
 const Wrapper = styled.div`
     background: #141414;
-    height:106vh;
+    min-height:106vh;
     .overlay{  
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 106vh;
+    min-height: 106vh;
     background: black;
     opacity: 0.6;
     width: 100%;
         @media only screen and (max-width: 768px) {
-            // height:107vh;
+            height:121vh;
         }
 }  
     .nav-header{
@@ -52,6 +52,7 @@ const Wrapper = styled.div`
             }
         }
         @media only screen and (max-width: 768px) {
+            visibility:hidden;
             padding-right:10px;    
             span{
                     font-size:smaller;
@@ -69,21 +70,21 @@ const Wrapper = styled.div`
         overflow:hidden !important;
         z-index:0;
         width:98vw;
-        height:106vh;
+        min-height:106vh;
         fiter:blur(2px);
         @media only screen and (max-width: 768px){
             object-fit:cover;
-            // height:107vh;
+            height:121vh;
         }
     }
  
     .hero-container{ 
-        min-height:90vh; 
+        min-height:109vh; 
         margin-top:1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         color: white;
         z-index:-1;
         .hero-img{
@@ -121,8 +122,8 @@ const Wrapper = styled.div`
             }
             @media only screen and (max-width: 768px){
                 h2{
-                    font-size:50px;
-                    line-height: unset;
+                   
+
                 }
             }
         }
@@ -138,24 +139,39 @@ const Wrapper = styled.div`
             }
           }
         @media only screen and (max-width: 768px) {
+           #twitter{
+            z-index:11;
+            margin-top:1.5rem;
+            margin-bottom:50px;
+            width:29.33px;
+        }
             .nav-header{
                 padding-right:5px !important;
             }
            #arrow{
-               margin-bottom:10rem;
-               margin-top:2rem;
+               margin-top: 42px;
            }
           
            .fkndbE .gif-image{
                height:84vh !important;
            }
             p{
-                font-size:small;
-                margin-bottom:29px;
+                text-decoration:none;
+                font-size:45px;
+                text-align:center;
+                width:219px;
+                line-height:60px;
+                font-weight:500;
+                // line-height:80px;
+                font-family:'Orator Std';
             }
             h2{
-                font-size:xx-large !important;
                 line-height: unset;
+                position:absolute;
+                font-size:36px !important;
+                top:20px !important;
+                font-weight:900;
+                font-family:Open Sans, sans-serif !important;
             }
             
         }
@@ -179,16 +195,17 @@ const Hero = () => {
             <div className="nav-header">
             <div className="social-holder">
            
-            <Button type="small"><span>CONNECT WALLET</span></Button>
-            <img src={twitter}  id="twitter" alt="twitter" />
+            
 
         </div> 
         </div>
         <div className="hero-container">
            
             <h2>$HITCOINS.<span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
-            <p>you’ve never seen shit like this before!</p>
-            <Button type="big" onClick={handleArrowClick}>get ready to Start some shit</Button>
+            <p>you’ve never seen shit like this!</p>
+            <img src={twitter}  id="twitter" alt="twitter" />
+            <Button type="small"><span>CONNECT WALLET</span></Button>
+            <Button type="big" className="d-none d-md-block" onClick={handleArrowClick}>get ready to Start some shit</Button>
             <img id="arrow" src={arrow} alt="alt" onClick={handleArrowClick}/>
         </div>
     </Wrapper>
