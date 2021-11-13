@@ -64,6 +64,16 @@ const Q1Wrapper =  styled.div`
 img{
     width:190px;
 }
+@media only screen and (max-width: 768px) {
+    font-size: 12px;
+    img{
+        width:50px;
+    }
+    .image-1{
+        width:293px;
+        height:auto;
+    }
+}
 
 `
 const Answer2 = ()=>{

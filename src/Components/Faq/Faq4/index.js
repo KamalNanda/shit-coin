@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Q1Wrapper =  styled.div`
 
 .heading-answer{
-    font-size: 35px;
+    font-size: 25px;
     font-weight:400;
     line-height:42px;
     font-style:normal;

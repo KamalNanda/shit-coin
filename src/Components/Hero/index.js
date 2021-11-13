@@ -8,18 +8,24 @@ const arrow = '/assets/images/Arrow 16.png'
 const twitter = '/assets/icons/twitter.svg'
 
 const Wrapper = styled.div`
+.main{
     background: #141414;
-    min-height:106vh;
+    height:100vh;
+    @media only screen and (max-width: 768px) {
+           height:106vh; 
+        }
+        
+}
     .overlay{  
     position: absolute;
     top: 0;
     bottom: 0;
-    min-height: 106vh;
+    height: 100vh;
     background: black;
     opacity: 0.6;
     width: 100%;
         @media only screen and (max-width: 768px) {
-            height:121vh;
+            height:106vh;
         }
 }  
     .nav-header{
@@ -70,21 +76,21 @@ const Wrapper = styled.div`
         overflow:hidden !important;
         z-index:0;
         width:98vw;
-        min-height:106vh;
+        height:100vh;
         fiter:blur(2px);
         @media only screen and (max-width: 768px){
             object-fit:cover;
-            height:121vh;
+            height:108vh;
         }
     }
  
     .hero-container{ 
-        min-height:109vh; 
-        margin-top:1rem;
+        height:100vh; 
+        // margin-top:1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         color: white;
         z-index:-1;
         .hero-img{
@@ -138,7 +144,9 @@ const Wrapper = styled.div`
                 margin-top: 20px;
             }
           }
-        @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 768px) {
+           
+            
            #twitter{
             z-index:11;
             margin-top:1.5rem;
@@ -190,11 +198,14 @@ const handleArrowClick = ()=>{
 
 const Hero = () => {
     return <Wrapper>
-            <img src={shit}  loop="infinite" className="gif-image" alt="loading..." />
+          <div className="main">
+                <img src={shit}  loop="infinite" className="gif-image" alt="loading..." />
             <div className="overlay" />
             <div className="nav-header">
             <div className="social-holder">
            
+            <Button type="small" className="d-none d-md-block"><span>CONNECT WALLET</span></Button>
+            <img src={twitter} className="d-none d-md-block" id="twitter" alt="twitter" />
             
 
         </div> 
@@ -202,12 +213,13 @@ const Hero = () => {
         <div className="hero-container">
            
             <h2>$HITCOINS.<span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
-            <p>you’ve never seen shit like this!</p>
-            <img src={twitter}  id="twitter" alt="twitter" />
-            <Button type="small"><span>CONNECT WALLET</span></Button>
-            <Button type="big" className="d-none d-md-block" onClick={handleArrowClick}>get ready to Start some shit</Button>
+            <p className="d-block d-md-none">you’ve never seen shit like this!</p>
+            <img src={twitter} className="d-block d-md-none" id="twitter" alt="twitter" />
+            <Button type="small" className="d-block d-md-none"><span>CONNECT WALLET</span></Button>
+            <Button type="big" className="d-none d-md-block" onClick={handleArrowClick}>you’ve never seen shit like this!</Button>
             <img id="arrow" src={arrow} alt="alt" onClick={handleArrowClick}/>
         </div>
+          </div>
     </Wrapper>
 }
 

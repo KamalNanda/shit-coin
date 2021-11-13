@@ -25,7 +25,7 @@ const FAQWrapper = styled.div`
         list-style-type:none;
         font-size: 25px;
         font-family: 'Orator Std';
-        line-height: 35px;
+        line-height: 29px;
         font-weight: 400;
        
         margin-top:2rem; 
@@ -55,13 +55,11 @@ const FAQWrapper = styled.div`
         justify-content:start;
         grid-gap:2px;
         list-style: none;
-        @media (max-width: 1660px){
             padding: 80px;
             padding-top:50px;
             padding-left:15%;
             padding-right:15%;
             
-        }
     }
     @media only screen and (max-width: 768px) {
         font-size:large;
@@ -69,13 +67,16 @@ const FAQWrapper = styled.div`
             width:unset;
             padding-left:3%;
             line-height:unset;
-            font-size:small;
+            font-size:16px;
         }
         .faq-answer{
-            margin-left:1.75rem;
-            margin-right:1.75rem;
+            // margin-left:18px;
+            // margin-right:18px;
             margin-top:1rem;
             padding: 20px;
+        }
+        li{
+            font-size:11px;
         }
     }
 `
