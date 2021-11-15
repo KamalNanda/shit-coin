@@ -42,14 +42,14 @@ const Button = styled.button`
         transform: translateY(-7px);
     }
     @media only screen and (max-width: 768px) {
-        width:178px;
+        width:198px;
         padding: ${
             props => props.type === "big"
                 ? "10px 20px" : ""
         };
         font-size: ${
             props => props.type === "big"
-                ? "15px" : "14px"
+                ? "15px" : "large"
         };
         line-height: ${
             props => props.type === "big"

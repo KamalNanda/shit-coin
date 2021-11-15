@@ -161,7 +161,7 @@ const Wrapper = styled.div`
             z-index:11;
             margin-top:1.5rem;
             margin-bottom:50px;
-            width:29.33px;
+            width:35px;
         }
             .nav-header{
                 padding-right:5px !important;
@@ -175,7 +175,7 @@ const Wrapper = styled.div`
            }
             p{
                 text-decoration:none;
-                font-size:45px;
+                font-size:41px;
                 text-align:center;
                 width:219px;
                 line-height:60px;
