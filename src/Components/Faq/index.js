@@ -30,6 +30,27 @@ const FAQWrapper = styled.div`
        
         margin-top:2rem; 
     }
+    .answer-6{
+        padding-left:25%;
+        height:40vh;
+        li{
+            line-height: 10px;
+            
+        }
+        @media only screen and (max-width: 768px){
+            margin:0;
+            padding:0;
+            height:35vh;
+            align-items:start !important;
+            ul{
+                margin:0;
+                margin-top:2rem;
+            }
+            li{
+                margin-top:1rem;
+            }
+        }
+    }
     .arrow-img{
         margin-right: 20px;
         cursor: pointer; 
@@ -102,8 +123,30 @@ const FAQ = (props) => {
                 <Answer heading={props.heading} answer={props.answer}/>
             </div>
             :
+            props.num==5?
+            <>
+                   <div className="faq-answer">
+                       <h2>{props.heading}</h2>
+                <ul >
+                    {props.answer.map((ans)=>{
+                        return(
+                            <li >{ans}</li>
+                        )
+                    })}
+                </ul>
+            </div>
+            </>
+            :
             props.num==6?
-            <div className="faq-answer "><Answer heading={props.heading} answer={props.answer}/></div>
+            <div className="d-flex align-items-center justify-content-start mt-3 answer-6">
+                <ul >
+                    {props.answer.map((ans)=>{
+                        return(
+                            <li >{ans}</li>
+                        )
+                    })}
+                </ul>
+            </div>
             : props.num==2?
             <Answer3 />
             : 
@@ -148,7 +191,8 @@ const FAQs = () => {
             question: 'When is $hit happening? ',
             type: 'black',
             num: 5,
-            answer:[]
+            heading:"JOIN THE SHITLIST",
+            answer:["the shitlist for minting is now open.","in order to join the shitlist you must authenticate your digital wallet with an active twitter account that is more than 3 months old"]
         },
         {
             question: ' Who made this $hit? ',

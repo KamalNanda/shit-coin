@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 const FooterWrapper = styled.div` 
  	padding: 80px;
- 	background: #fff;
+ 	background: black;
  	position: relative;
- 	color: #000 ; 
+ 	color: white ; 
  	height: auto;
  	display: flex;
  	flex-direction: column;
@@ -37,7 +37,9 @@ const FooterWrapper = styled.div`
 			width: 30px !important;
 		} 
 		p{
-			font-size: small;
+			font-size: smaller;
+			line-height:unset;
+			letter-spaccing:5%;
 		} 
 }
 `
@@ -48,7 +50,7 @@ function Footer(){
 			
 			
 <a href="https://www.twitter.com" target="_blank">
-				<img src={'/assets/icons/twitter-black.svg'}  alt={"twitter"} />
+				<img src={'/assets/icons/twitter.svg'}  alt={"twitter"} />
 			</a> 
 		</div>
 		<p>Copyright 2021 Shitcoins.cheap All Rights Reserved.</p>

@@ -47,7 +47,7 @@ const Wrapper = styled.div`
             font-size:13px;
             // margin-top:10px;
             // margin-bottom:10px;
-            line-height:32px;
+            line-height:19px;
             font-weight:900;
         }
     }
