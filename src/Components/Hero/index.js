@@ -143,6 +143,7 @@ const Wrapper = styled.div`
                 }
             }
         }
+
         #arrow{
             margin-top: 60px;
             display: block;
@@ -155,7 +156,9 @@ const Wrapper = styled.div`
             }
           }
           @media only screen and (max-width: 768px) {
-           
+           .hero-container{
+               height:100vh !important;
+           }
             
            #twitter{
             z-index:11;
@@ -194,11 +197,19 @@ const Wrapper = styled.div`
             
         }
     }
+
     @media only screen and (max-width: 650px) {
         p{
             padding-top:3rem;
         }
     }
+    @media only screen and (min-width: 800px){
+        
+        .hero-container{
+            height:90vh !important;
+        }
+    }
+      
 `
 
 
@@ -219,7 +230,7 @@ const Hero = () => {
             <div className="nav-header">
             <div className="social-holder">
            
-            <Button type="small" className="d-none d-md-block" ><span>CONNECT WALLET</span></Button>
+            <Button type="small" className="d-none d-md-block" >CONNECT WALLET</Button>
             <img src={twitter} className="d-none d-md-block" id="twitter" alt="twitter" />
             
 
@@ -230,7 +241,7 @@ const Hero = () => {
             <h2>$HITCOINS.<span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
             <p className="d-block d-md-none">you’ve never seen shit like this!</p>
             <img src={twitter} className="d-block d-md-none" id="twitter" alt="twitter" />
-            <Button type="small" className="d-block d-md-none"><span>CONNECT WALLET</span></Button>
+            <Button type="small" className="d-block d-md-none">CONNECT WALLET</Button>
             <Button type="big" className="d-none d-md-block" onClick={handleArrowClick}>you’ve never seen shit like this!</Button>
             <img id="arrow" src={arrow} alt="alt" onClick={handleArrowClick}/>
         </div>

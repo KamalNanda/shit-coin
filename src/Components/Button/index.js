@@ -41,8 +41,14 @@ const Button = styled.button`
         box-shadow: 0px 15px 20px #141414;
         transform: translateY(-7px);
     }
+    @media only screen and (max-width: 850px){
+        padding:0 !important;
+        line-height: unset !important;
+        margin:0 !important;
+        padding-top:5px !important;
+        padding-top:4px !important;
+    }
     @media only screen and (max-width: 768px) {
-        height:auto;
         width:198px;
         padding: ${
             props => props.type === "big"

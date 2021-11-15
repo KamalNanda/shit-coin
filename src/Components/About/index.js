@@ -82,11 +82,10 @@ const Wrapper = styled.div`
     }
     .black{
         background: #141414; 
-        height: auto;
         width: calc(100% - 50px);
-        display: flex;  
-        align-items: center;
-        justify-content: center;
+        display: flex !important;  
+        align-items: center !important;
+        justify-content: center !important;
         text-align: center;
         color: white; 
         :hover{
@@ -146,7 +145,18 @@ const Wrapper = styled.div`
             line-height:45px;
             font-size:12px;
         }
+        .black{
+            padding-top:5px;
+        }
+        .black-input{
+            padding-top:5px;
+
+        }
+        input{
+            height:auto;
+        }
     }
+    
 `
 
 const Step = ({ data }) => {
@@ -317,7 +327,7 @@ const About = () => {
             <strong>&nbsp;&nbsp;Step 4: Submit</strong>
             
             <div className="d-flex w-100">
-                <div className="black">
+                <div className="black-input">
                     <input type="submit" placeholder="Submit" style={{"padding":"0"}} />
                 </div>
                 <div className="black-cross">
