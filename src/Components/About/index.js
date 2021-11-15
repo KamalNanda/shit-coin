@@ -82,7 +82,7 @@ const Wrapper = styled.div`
     }
     .black{
         background: #141414; 
-        height: 40px;
+        height: auto;
         width: calc(100% - 50px);
         display: flex;  
         align-items: center;
