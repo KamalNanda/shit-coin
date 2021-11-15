@@ -14,6 +14,9 @@ const Wrapper = styled.div`
     @media only screen and (max-width: 768px) {
            height:106vh; 
         }
+        @media only screen and (max-width: 650px) {
+            height:112vh; 
+         }
         
 }
     .overlay{  
@@ -26,6 +29,9 @@ const Wrapper = styled.div`
     width: 100%;
         @media only screen and (max-width: 768px) {
             height:106vh;
+        }
+        @media only screen and (max-width: 650px) {
+            height:112vh;
         }
 }  
     .nav-header{
@@ -80,7 +86,11 @@ const Wrapper = styled.div`
         fiter:blur(2px);
         @media only screen and (max-width: 768px){
             object-fit:cover;
-            height:108vh;
+            height:106vh;
+        }
+        @media only screen and (max-width: 650px){
+            object-fit:cover;
+            height:111vh;
         }
     }
  
@@ -184,6 +194,11 @@ const Wrapper = styled.div`
             
         }
     }
+    @media only screen and (max-width: 650px) {
+        p{
+            padding-top:3rem;
+        }
+    }
 `
 
 
@@ -204,7 +219,7 @@ const Hero = () => {
             <div className="nav-header">
             <div className="social-holder">
            
-            <Button type="small" className="d-none d-md-block"><span>CONNECT WALLET</span></Button>
+            <Button type="small" className="d-none d-md-block" ><span>CONNECT WALLET</span></Button>
             <img src={twitter} className="d-none d-md-block" id="twitter" alt="twitter" />
             
 

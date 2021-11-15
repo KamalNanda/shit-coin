@@ -5,6 +5,7 @@ const Button = styled.button`
     border: 5px solid #FFFFFF;
     cursor:pointer;
     box-sizing: border-box;
+    
     font-weight: 400;
     z-index:1;
     padding: ${
@@ -41,9 +42,10 @@ const Button = styled.button`
         transform: translateY(-7px);
     }
     @media only screen and (max-width: 768px) {
+        width:178px;
         padding: ${
             props => props.type === "big"
-                ? "10px 20px" : "9.5px"
+                ? "10px 20px" : ""
         };
         font-size: ${
             props => props.type === "big"

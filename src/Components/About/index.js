@@ -113,6 +113,7 @@ const Wrapper = styled.div`
         background: #141414 !important; 
         color:white;
         width:100%;
+        height:40px !important;
         border:none;
         padding:10px;
         text-align: center;
@@ -307,7 +308,7 @@ const About = () => {
                     
                 </div>
                 <div className="black-cross">
-                {clicked ? <img src={cross} alt="cross" /> : <h2 style={{ "color": "black" }}>X</h2>}
+                {clicked ? <img src={cross} alt="cross" /> : <img src={cross} alt="cross" style={{"visibility": "hidden"}}/>}
                  </div>
 
             </div>
@@ -317,10 +318,10 @@ const About = () => {
             
             <div className="d-flex w-100">
                 <div className="black">
-                    <input type="submit" placeholder="Submit" />
+                    <input type="submit" placeholder="Submit" style={{"padding":"0"}} />
                 </div>
                 <div className="black-cross">
-                {clicked ? <img src={cross} alt="cross" /> : <h2 style={{ "color": "black" }}>X</h2>}
+                {clicked ? <img src={cross} alt="cross" /> : <img src={cross} alt="cross" style={{"visibility": "hidden"}}/>}
                  </div>
             </div>
         </form>
