@@ -203,7 +203,7 @@ const Wrapper = styled.div`
             padding-top:3rem;
         }
     }
-    @media only screen and (min-width: 800px){
+    @media only screen and (max-width: 900px){
         
         .hero-container{
             height:90vh !important;

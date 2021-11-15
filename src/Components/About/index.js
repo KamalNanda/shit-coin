@@ -44,11 +44,11 @@ const Wrapper = styled.div`
         width: 36%;
         @media (max-width:768px){
             width: 90%;
-            font-size:13px;
+            font-size:15px;
             // margin-top:10px;
             // margin-bottom:10px;
-            line-height:19px;
-            font-weight:900;
+            line-height:15px;
+            font-weight:bolder;
         }
     }
     ::placeholder{
@@ -147,6 +147,8 @@ const Wrapper = styled.div`
         }
         .black{
             padding-top:5px;
+            font-size:small;
+            letter-spacing: 0.5px;
         }
         .black-input{
             padding-top:5px;

@@ -68,6 +68,18 @@ const FAQWrapper = styled.div`
         line-height:unset;
         margin-bottom:0 !important;
     }
+    .faq-answer-6{
+        height:auto !important;
+        padding:20px;
+        ul{
+            padding:0;
+            padding-top:5px;
+        }        
+    }
+    .answer-6-heading{
+        padding-top:10px;
+        text-decoration:underline !important;
+    }
     .faq-answer{
         min-height: 90vh;
         display:flex;
@@ -97,7 +109,8 @@ const FAQWrapper = styled.div`
             padding: 20px;
         }
         li{
-            font-size:11px;
+            font-size:12px;
+            line-height:25px;
         }
     }
 `
@@ -125,8 +138,8 @@ const FAQ = (props) => {
             :
             props.num==5?
             <>
-                   <div className="faq-answer">
-                       <h2>{props.heading}</h2>
+                   <div className="faq-answer-6">
+                       <h2 className="answer-6-heading">{props.heading}</h2>
                 <ul >
                     {props.answer.map((ans)=>{
                         return(
