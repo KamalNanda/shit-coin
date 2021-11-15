@@ -53,7 +53,7 @@ const Button = styled.button`
         };
         line-height: ${
             props => props.type === "big"
-                ? "20px" : "15px"
+                ? "20px" : "unset"
         }; 
     };
 `

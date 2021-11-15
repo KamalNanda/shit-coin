@@ -195,8 +195,27 @@ const Wrapper = styled.div`
         }
     }
     @media only screen and (max-width: 650px) {
+     
         p{
             padding-top:3rem;
+        }
+    }
+    @media only screen and (max-width:850px){
+        .main{
+            height:101vh;
+        }
+        .gif-image{
+            height:100vh;
+        }
+        .overlay{
+            height:101vh;
+        }
+        .hero-container{
+            height:90vh;
+        }
+        p{
+            padding-top:0 !important;
+            margin-top:0 !important;
         }
     }
 `
@@ -205,7 +224,7 @@ const Wrapper = styled.div`
 
 const handleArrowClick = ()=>{
     window.scrollTo({
-        top:900,
+        top:700,
         left:0,
         behavior:'smooth'
     })
