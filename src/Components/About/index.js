@@ -156,6 +156,7 @@ const Wrapper = styled.div`
         }
         input{
             height:auto;
+            font-size:small;
         }
     }
     
@@ -300,7 +301,7 @@ const About = () => {
         })
     }
     return <Wrapper>
-        <p style={{ marginBottom: '19px' }} className="l-normal">
+        <p style={{ marginBottom: '19px' }} className="l-normal mb-5 ">
             Welcome $hitheads, to join the shitlist
             <br />you must follow these steps and then
             <br />wait until we’re good and ready.
@@ -312,11 +313,11 @@ const About = () => {
         }
         <div className="d-flex align-items-center justify-content-center mt-0" >
         <form onSubmit={handleSubmit}>
-            <strong>&nbsp;&nbsp;Step 3: Drop an Email</strong>
+            <strong>Step 3: Drop an Email</strong>
             
             <div className="d-flex w-100">
                 <div className="black-input">
-                    <input type="email" placeholder="[ TYPE EMAIL ]" onChange={handleChange} value={email} />
+                    <input type="email" placeholder="TYPE EMAIL" onChange={handleChange} value={email} />
                     
                 </div>
                 <div className="black-cross">
@@ -326,7 +327,7 @@ const About = () => {
             </div>
             <div className="mb-1">{errmessage}</div>
 
-            <strong>&nbsp;&nbsp;Step 4: Submit</strong>
+            <strong>Step 4: Submit</strong>
             
             <div className="d-flex w-100">
                 <div className="black-input">

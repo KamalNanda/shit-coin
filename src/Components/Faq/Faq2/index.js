@@ -10,6 +10,8 @@ const r3 = "/assets/images/faq/r3.png"
 const r4 = "/assets/images/faq/r4.png"
 const r5 = "/assets/images/faq/r5.png"
 const image = "/assets/images/faq/imag1.png"
+const image1 = "/assets/images/faq/poop.svg"
+
 
 const Q1Wrapper =  styled.div`
 .position{
@@ -145,7 +147,7 @@ const Answer2 = ()=>{
                     as a genesis $hitcoin holder, you will have the opportunity to build a network of up to 10 people who are actively holding NFTs from within your lineage.
                     </div>
                     <div className="mt-5">
-                    <img src={image} className="image-1"/>
+                    <img src={image1} className="image-1"/>
                     </div>
                     <div className="mt-5 padding-top-3">
                      those who choose well will stand to benefit both from royalties and from a well honed network of active $hitcoin holders in their own lineage.

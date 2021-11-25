@@ -215,14 +215,17 @@ const Wrapper = styled.div`
 
 
 const handleArrowClick = ()=>{
+    var width = window.innerWidth > 850 ? 700 : 750
+    
     window.scrollTo({
-        top:500,
+        top:width,
         left:0,
         behavior:'smooth'
     })
 }
 
 const Hero = () => {
+    console.log(window.innerWidth)
     return <Wrapper>
           <div className="main">
                 <img src={shit}  loop="infinite" className="gif-image" alt="loading..." />
