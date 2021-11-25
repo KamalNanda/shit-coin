@@ -75,6 +75,10 @@ img{
         width:293px;
         height:auto;
     }
+    .value-box{
+        height:40px;
+        width:90%;
+    }
 }
 
 `
@@ -83,14 +87,14 @@ const Answer2 = ()=>{
             <Q1Wrapper>
                 <div className="position">
                 <div className="mt-3 padding-top-3">
-                90% of each $hitcoin sale goes to the owner. 10% of each $hitcoin sale is re-distributed as a royalty to the $hitcoin creators, the Shit DAO, and the provenance chain of custudy among former owners of that specific $hitcoin.
+                90% of each $hitcoin sale goes to the owner. 10% of each $hitcoin sale is re-distributed as a royalty to the $hitcoin creators, the Shit DAO, and the provenance chain of custudy among former owners of that specific $hitcoin NFT.
                 </div>
                 <div className="value-box">
                 <div className="row">
-                    <div className="col-2 text-light d-flex align-items-center justify-content-center">
+                    <div className="col-md-2 col-3 text-light d-flex align-items-center justify-content-center">
                         10%
                     </div>
-                    <div className="col-10 text-black d-flex align-items-center justify-content-center">
+                    <div className="col-md-10 col-9 text-black d-flex align-items-center justify-content-center">
                         90%
                     </div>
                 </div>

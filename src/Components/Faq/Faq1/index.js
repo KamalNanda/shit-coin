@@ -40,19 +40,16 @@ const Q1 = ()=>{
         ]
     },
     {
-        heading:"CHILDREN",
-        answer:["the original minter of a $hitcoin may sell their $hitcoin and receive up to 9 replacement $hitcoin nfts","when a $hitcoin is sold by its original minter, the minting wallet will receive an airdroped replacement big $hit NFT.",
-        "your big $hit NFT will also contain the infinite diluting royalty contract.","you may sell your big $hit NFT to receive a second big $hit NFT.","you may sell your second big $hit NFT to receive a third big $hit NFT","you may sell your third big $hit NFT, but you will not receive a fourth big $hit NFT.",
-              ]
+        heading:"$HITCOINS, BIG $HITS, & $HITHEADS",
+        answer:["the original minter of a $hitcoin may sell their $hitcoin and receive up to 9 replacement $hitcoin nfts.","when a $hitcoin is sold by its original minter, the minting wallet will receive an airdroped replacement big $hit NFT.",
+        "your big $hit NFT will also contain the infinite diluting royalty contract.","you may sell your big $hit NFT to receive a second big $hit NFT.","you may sell your second big $hit NFT to receive a third big $hit NFT.",
+        "you may sell your third big $hit NFT, but you will not receive a fourth big $hit NFT. instead you will receive your first $hithead nft,which will also contain the infinite diluting royalty contract.","$hithead NFTs can be sold for 2 replacement $hithead NFTs.there will be no replacement NTFs awarded after the third $hithead NFT is minted.",
+        "in other words, your third $hithead nft is the final nft in your $hitcoin’s lineage."],
+   
     },
     {
-        heading:"grandchildren",
-        answer:["big $hit NFTs can also have children.","when a big $hit NFT is sold the original owner will be airdropped a $hithead NFT which will also contain the infinite diluting royalty contract.",
-        "$hithead NFTs can be sold for 2 replacement $hithead NFTs.","there will be no replacement NTFs awarded after the second $hithead NFT is minted."]
-    },
-    {
-        heading:"PRIMARY OWNERS vs SECONDARY OWNER",
-        answer:["Sonly primary owners of a $hitcoin genesis token are eligeable for air-dropped replacemnts of their $hitcoin nfts. ","Secondary owners of $hitcoin nfts, be they $hitcoins, big $hits or $hitheads, are able to sell their nfts to gain inclusion on that nft’s inifinite diluting royalty contract, however, secondary sale owners are not eligeable for airdropped replacement nfts."]
+        heading:"PRIMARY OWNERS vs SECONDARY OWNERS",
+        answer:["Only primary owners of a $hitcoin genesis token are eligeable for air-dropped replacemnts of their $hitcoin nfts. ","Secondary owners of $hitcoin nfts, be they $hitcoins, big $hits or $hitheads, are able to sell their nfts to gain inclusion on that nft’s inifinite diluting royalty contract, however, secondary sale owners are not eligeable for airdropped replacement nfts."]
 }]
     return(
             <Q1Wrapper>
@@ -92,7 +89,9 @@ const Q1 = ()=>{
                 XII. 101 $hitcoins<br />
                 XIII. 101 $hitcoins<br />
                 XIV. 101 $hitcoins<br />
-                XV. 99 $hitcoins the first mint will open XX/XX/XX.<br /> </li>
+                XV. 99 $hitcoins<br/> 
+                </li>
+                <li>the first mint will open XX/XX/XX.<br /> </li>
                 <li>the timing of the second mint, and each subsequent mint, will be determined by a 51% vote by the holy $hit dao, which is formed by all active $hitcoin holders. 
                 </li>
                 </ul>
@@ -100,10 +99,10 @@ const Q1 = ()=>{
                 <div className="mt-3">
                 only active $hictoin token holders are given voting rights in the Holy Shit Dao. the shit dao votes upon the following:
                 <ul className="mt-3">
-                    <li style={{"list-style-type":"disc","margin-top":"unset"}}>When the next traunch of genesis shitcoins are available for minting.</li>
-                    <li style={{"list-style-type":"disc","margin-top":"unset"}}>How to spend the dao treasury</li>
+                    <li style={{"list-style-type":"disc","margin-top":"unset","margin-bottom":"20px"}}>When the next traunch of genesis shitcoins are available for minting.</li>
+                    <li style={{"list-style-type":"disc","margin-top":"unset","margin-bottom":"20px"}}>How to spend the dao treasury</li>
 
-                    <li style={{"list-style-type":"disc","margin-top":"unset"}}>Thats it</li>
+                    <li style={{"list-style-type":"disc","margin-top":"unset","margin-bottom":"20px"}}>Thats it</li>
                 </ul>
 
                 </div>

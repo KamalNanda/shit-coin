@@ -32,14 +32,15 @@ const FooterWrapper = styled.div`
 
  	}
 	@media(max-width:  768px){
-	 	padding: 20px;
-		img{
-			width: 30px !important;
-		} 
+	 	padding: 20px; 
 		p{
-			font-size: smaller;
-			line-height:unset;
+			font-size: 15px;
+			line-height:15px;
 			letter-spaccing:5%;
+		}
+		.twitter{
+			height:33.72px;
+			width:41px;
 		} 
 }
 `
@@ -49,11 +50,11 @@ function Footer(){
 		<div className="footer-flex">
 			
 			
-<a href="https://www.twitter.com" target="_blank">
-				<img src={'/assets/icons/twitter.svg'}  alt={"twitter"} />
+			<a href="https://www.twitter.com" target="_blank">
+				<img src={'/assets/icons/twitter.svg'}  className="twitter" alt={"twitter"} />
 			</a> 
 		</div>
-		<p>Copyright 2021 Shitcoins.cheap All Rights Reserved.</p>
+		<p>Copyright 2021 Shitcoins Inc. All Rights Reserved.</p>
 	</FooterWrapper>
 }
 export default Footer
