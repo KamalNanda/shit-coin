@@ -34,7 +34,7 @@ const FooterWrapper = styled.div`
 	@media(max-width:  768px){
 	 	padding: 20px; 
 		p{
-			font-size: 15px;
+			font-size: 10px;
 			line-height:15px;
 			letter-spaccing:5%;
 		}

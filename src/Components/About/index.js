@@ -295,7 +295,7 @@ const About = () => {
     ]
     const handleArrowClick = () => {
         window.scrollTo({
-            top: 1500,
+            top: 1700,
             left: 0,
             behavior: 'smooth'
         })

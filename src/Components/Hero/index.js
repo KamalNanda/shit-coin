@@ -215,7 +215,7 @@ const Wrapper = styled.div`
 
 
 const handleArrowClick = ()=>{
-    var width = window.innerWidth > 850 ? 700 : 750
+    var width = window.innerWidth > 850 ? 700 : 800
     
     window.scrollTo({
         top:width,
