@@ -56,6 +56,7 @@ const Wrapper = styled.div`
                 margin: 0 20px;
                 z-index:111;
                 width:50px;
+                cursor:pointer;
                 @media (max-width: 768px){
                     margin: 0 10px;
                         width:35px;
@@ -166,6 +167,7 @@ const Wrapper = styled.div`
             margin-bottom:50px;
             width:35px;
         }
+       
             .nav-header{
                 padding-right:5px !important;
             }
@@ -224,7 +226,7 @@ const handleArrowClick = ()=>{
     })
 }
 
-const Hero = () => {
+const Hero = (props) => {
     console.log(window.innerWidth)
     return <Wrapper>
           <div className="main">
@@ -233,9 +235,9 @@ const Hero = () => {
             <div className="nav-header">
             <div className="social-holder">
            
-            <Button type="small" className="d-none d-md-block" >CONNECT WALLET</Button>
-            <img src={twitter} className="d-none d-md-block" id="twitter" alt="twitter" />
-            
+            <Button type="small" className="d-none d-md-block" >{props.defaultAccount?<span>Wallet Connected</span>:<span onClick={props.connectWalletHandler}>CONNECT WALLET</span>}</Button>
+            <a href="https://www.twitter.com" target="_blank" style={{"color":"unset","text-decoration": "none","z-index":"111"}}> <img src={twitter} className="d-none d-md-block" id="twitter" alt="twitter" /></a>
+
 
         </div> 
         </div>
@@ -243,10 +245,10 @@ const Hero = () => {
            
             <h2>$HITCOINS.<span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
             <p className="d-block d-md-none">you’ve never seen shit like this!</p>
-            <img src={twitter} className="d-block d-md-none" id="twitter" alt="twitter" />
-            <Button type="small" className="d-block d-md-none">CONNECT WALLET</Button>
+            <a href="https://www.twitter.com" target="_blank" style={{"color":"unset","text-decoration": "none","z-index":"111"}}><img src={twitter} className="d-block d-md-none" id="twitter" alt="twitter"  /></a>
+            <Button type="small" className="d-block d-md-none">{props.defaultAccount?<span>Wallet Connected</span>:<span onClick={props.connectWalletHandler}>CONNECT WALLET</span>}</Button>
             <Button type="big" className="d-none d-md-block" onClick={handleArrowClick}>you’ve never seen shit like this!</Button>
-            <img id="arrow" src={arrow} alt="alt" onClick={handleArrowClick}/>
+            <img id="arrow" src={arrow} alt="alt" onClick={handleArrowClick} />
         </div>
           </div>
     </Wrapper>

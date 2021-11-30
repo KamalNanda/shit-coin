@@ -45,7 +45,7 @@ const FooterWrapper = styled.div`
 }
 `
 
-function Footer(){
+function Footer(props){
 	return <FooterWrapper> 
 		<div className="footer-flex">
 			

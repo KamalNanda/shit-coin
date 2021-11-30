@@ -71,11 +71,19 @@ const FAQWrapper = styled.div`
     .faq-answer-6{
         height:auto !important;
         padding:20px;
+        align-items: center;
+        justify-content: center;
+        display: grid;
         ul{
             padding:0;
             padding-top:5px;
+            width:44vw;
+            li{
+                font-size:15px !important;
+            }
         }        
     }
+  
     .answer-6-heading{
         padding-top:10px;
         text-decoration:underline !important;
@@ -138,9 +146,9 @@ const FAQ = (props) => {
             :
             props.num==5?
             <>
-                   <div className="faq-answer-6">
+                   <div className="faq-answer-6 ">
                        <h2 className="answer-6-heading">{props.heading}</h2>
-                <ul >
+                <ul className="faq-answer-6-ul">
                     {props.answer.map((ans)=>{
                         return(
                             <li >{ans}</li>

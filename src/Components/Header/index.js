@@ -25,6 +25,9 @@ const Wrapper = styled.div`
             }
         }
     }
+    #twitter{
+        cursor:pointer !important;
+    }
     @media only screen and (max-width: 768px) {
             span{
                 font-size:smaller;
