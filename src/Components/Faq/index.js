@@ -220,7 +220,7 @@ const FAQs = () => {
             type: 'white',
             num: 6,
             heading:"",
-            answer:["Metafive","spacecowboy","rob-eth","pk$"]
+            answer:["Metafive","spacecowboy","rob.eth","pk$"]
         }
     ]
 

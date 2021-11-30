@@ -91,7 +91,7 @@ const Q1 = ()=>{
                 XIV. 101 $hitcoins<br />
                 XV. 99 $hitcoins<br/> 
                 </li>
-                <li>the first mint will open XX/XX/XX.<br /> </li>
+                <li>the first mint will open Soon<br /> </li>
                 <li>the timing of the second mint, and each subsequent mint, will be determined by a 51% vote by the holy $hit dao, which is formed by all active $hitcoin holders. 
                 </li>
                 </ul>
