@@ -142,6 +142,7 @@ const Answer2 = ()=>{
                                 <img src={r5} />
                         </div>
                     </div> 
+                    <div className="w-100 d-flex align-items-start flex-column justify-content-start">
                     <div className="mt-5 mr-3 padding-top-3">
                     you might want to be thoughtful about who you sell your shit to.  
                     </div>
@@ -151,7 +152,8 @@ const Answer2 = ()=>{
                     <div className="mt-5 padding-top-3">
                     as a genesis $hitcoin holder, you will have the opportunity to build a network of up to 10 people who are actively holding NFTs from within your lineage.
                     </div>
-                    <div className="mt-5">
+                    </div>
+                    <div className="">
                     <img src={image1} className="image-1"/>
                     </div>
                     <div className="mt-5 padding-top-3">

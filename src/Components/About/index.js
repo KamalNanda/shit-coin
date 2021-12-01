@@ -41,7 +41,7 @@ const Wrapper = styled.div`
     strong{
         font-size: 20px;
         line-height: 24px; 
-        width: 40%;
+        width: 36%;
         @media (max-width:768px){
             width: 90%;
             font-size:15px;
@@ -49,6 +49,11 @@ const Wrapper = styled.div`
             // margin-bottom:10px;
             line-height:15px;
             font-weight:bolder;
+        }
+    }
+    form{
+        strong{
+            margin-left:28px;
         }
     }
     ::placeholder{

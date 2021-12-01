@@ -28,7 +28,7 @@ const FAQWrapper = styled.div`
         line-height: 29px;
         font-weight: 400;
        
-        margin-top:2rem; 
+        margin-top:1.5rem; 
     }
     .answer-6{
         padding-left:25%;
@@ -164,11 +164,11 @@ const FAQ = (props) => {
                     {props.answer.map((ans,index)=>{
                         if(index == 2 || index == 3){
                             return(
-                                <li >{ans}</li>
+                                <li style={{"font-size":"18px"}}>{ans}</li>
                             )    
                         }
                         return(
-                            <li style={{"text-decoration": "underline"}}>{ans}</li>
+                            <li style={{"text-decoration": "underline","font-size":"18px"}}>{ans}</li>
                         )
                     })}
                 </ul>

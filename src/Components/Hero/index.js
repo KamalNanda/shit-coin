@@ -129,7 +129,7 @@ const Wrapper = styled.div`
        
         h2{
             z-index:1;
-            font-size:100px !important;
+            font-size:90px !important;
             font-weight:800;
             font-style:normal;
             font-family:open sans;

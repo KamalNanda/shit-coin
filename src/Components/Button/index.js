@@ -10,14 +10,14 @@ const Button = styled.button`
     z-index:1;
     padding: ${
         props => props.type === "big"
-            ? "18px 40px" : "13px"
+            ? "15px 37px" : "13px"
     };
     display:block;
     width: fit-content;
     color:white;
     font-size: ${
         props => props.type === "big"
-            ? "30px" : "20px"
+            ? "27px" : "20px"
     };
     line-height: ${
         props => props.type === "big"

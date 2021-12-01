@@ -6,7 +6,7 @@ const Q1Wrapper =  styled.div`
 //     min-height: 90vh;
 //     display:flex;
 //     flex-direction: column;
-//     align-items:center !important;
+//     align-items:start !important;
 //     justify-content:start;
 //     grid-gap:2px;
 //     list-style: none;
@@ -17,6 +17,22 @@ const Q1Wrapper =  styled.div`
         
 //     }
 // }
+.faq-answer1{
+    min-height: 90vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center !important;
+    justify-content:start;
+    grid-gap:2px;
+    list-style: none;
+        padding-top:50px;
+        padding-left:15%;
+        padding-right:15%;
+        
+}
+.f-normal{
+    font-size:medium;
+}
 
 .w-90{
     width:100%;
@@ -52,8 +68,8 @@ const Q1 = ()=>{
 }]
     return(
             <Q1Wrapper>
-                <div className="faq-answer" >
-                <span className="heading-answer">ROYALTIES</span>
+                <div className="faq-answer1 " style={{"align-items":"start !important"}} >
+                <div className="heading-answer text-left">ROYALTIES</div>
                 <ul>
                 <li>each $hitcoin is minted with an embedded infinite diluting royalty contract which automatically adds secondary owners into the royalty distribution chain upon each sale, in perpetuity.</li>
                 <li><span style={{"text-decoration": "underline"}}>What this Means:</span> if you buy a $hitcoin and then sell it, your wallet hash will be forever added to the royalty distribution list within the smart contract of your $hitcoin.</li>
@@ -71,7 +87,7 @@ const Q1 = ()=>{
                         )
                 })}
                 </div>
-                <div className="faq-answer" >
+                <div className="faq-answer1" >
             <div className="heading-answer text-left w-90">NFT tokenomics</div>
             <div className="d-flex align-items-center justify-content-start w-90">
             <ul>
@@ -105,7 +121,7 @@ const Q1 = ()=>{
                 </ul>
                 <div className="heading-answer text-left w-90 mt-5">HOLY SHIT DAO</div>
                 <div className="mt-3">
-                only active $hictoin token holders are given voting rights in the Holy Shit Dao. the shit dao votes upon the following:
+                <p className="f-normal">only active $hictoin token holders are given voting rights in the Holy Shit Dao. the shit dao votes upon the following:</p>
                 <ul className="mt-3">
                     <li style={{"list-style-type":"disc","margin-top":"unset","margin-bottom":"20px"}}>When the next traunch of genesis shitcoins are available for minting.</li>
                     <li style={{"list-style-type":"disc","margin-top":"unset","margin-bottom":"20px"}}>How to spend the dao treasury</li>
