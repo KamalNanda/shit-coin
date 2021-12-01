@@ -10,7 +10,12 @@ const Q1Wrapper =  styled.div`
     text-transform:uppercase;
 }
 ul{
+
     padding-left:0 !important;
+    li{
+        font-size: 15px;
+
+    }
 }
 
 `

@@ -161,9 +161,14 @@ const FAQ = (props) => {
             props.num==6?
             <div className="d-flex align-items-center justify-content-start mt-3 answer-6">
                 <ul >
-                    {props.answer.map((ans)=>{
+                    {props.answer.map((ans,index)=>{
+                        if(index == 2 || index == 3){
+                            return(
+                                <li >{ans}</li>
+                            )    
+                        }
                         return(
-                            <li >{ans}</li>
+                            <li style={{"text-decoration": "underline"}}>{ans}</li>
                         )
                     })}
                 </ul>
@@ -204,8 +209,13 @@ const FAQs = () => {
             type: 'white',
             num: 4,
             heading:"the most complex shit ever made",
-            answer:["A shitty emoji floats optimistically in space anticipating its dramatic transformation from shit to shinola.","the shit dao runs a bot to assess the total market value of the $hitcoin collection based on the most recent sale price of each nft in the shit show.","when the shitbot determines that the total market value of the $hitcoin collection exceeds $1,000,000 USD all of our shit will transform from shit brown to penny copper.",
-"when the shitbot determines that the total market value of the $hitcoin collection exceeds $10,000,000 USD all of our shit will transform from penny copper to silver."]
+            answer:["A shitty emoji floats optimistically in space anticipating its dramatic transformation from shit to shinola","the shit dao runs a bot to assess the total market value of the $hitcoin collection based on the most recent sale price of each nft in the shit show.",
+            "when the shitbot determines that the total market value of the $hitcoin collection exceeds $1,000,000 USD all of our shit will transform from shit brown to penny copper.",
+            "when the shitbot determines that the total market value of the $hitcoin collection exceeds $10,000,000 USD all of our shit will transform from penny copper to silver.",
+            "when the shitbot determines that the total market value of the $hitcoin collection exceeds $100,000,000 USD all of our shit will transform from silver to gold.",
+            "when the shitbot determines that the total market value of the $hitcoin collection exceeds $1,000,000,000 USD all of our shit will transform from gold to diamond.",
+            "at this stage we have reached holy shit status and each dao member will be given a parking space on the moon for their shitty lambo (when possible).",
+            "$hitcoin art is available royalty free to active shitcoin holders and can be use commercially by shitcoin holders without limit. if you want to use this $hit, you can have it."]
 
         },
         {

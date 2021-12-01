@@ -17,6 +17,7 @@ const Q1Wrapper =  styled.div`
         
 //     }
 // }
+
 .w-90{
     width:100%;
 }
@@ -29,16 +30,14 @@ const Q1Wrapper =  styled.div`
 }
 ul{
     padding-left:0 !important;
+    li{
+        font-size:15px !important;
+    }
 }
 
 `
 const Q1 = ()=>{
-    const answers=[{
-        heading:"ROYALTIES",
-        answer:["each $hitcoin is minted with an embedded infinite diluting royalty contract which automatically adds secondary owners into the royalty distribution chain upon each sale, in perpetuity.","what this means: if you buy a $hitcoin and then sell it, your wallet hash will be forever added to the royalty distribution list within the smart contract of your $hitcoin.","as $hitcoins flip from wallet to wallet, a lineage of owners forms and the royalties from each successive sale of your $hitcoin will be evenly distributed among your growing owner lineage forever.","each $hitcoin smart contract contains provisions for 10% of each sale to be awarded as royalties to be distributed equallty among the 4 $hitcoin creators, the holy $hit dao, and the entire chain of secondary owners of a $hitcoin.",
-        "there are no limits to how many times a $hitcoin can be owned, and a specific $hitcoin can be re-owned by a former owners same wallet, however an owners wallet can only be added to the royalty distribution list once"
-        ]
-    },
+    const answers=[
     {
         heading:"$HITCOINS, BIG $HITS, & $HITHEADS",
         answer:["the original minter of a $hitcoin may sell their $hitcoin and receive up to 9 replacement $hitcoin nfts.","when a $hitcoin is sold by its original minter, the minting wallet will receive an airdroped replacement big $hit NFT.",
@@ -54,6 +53,14 @@ const Q1 = ()=>{
     return(
             <Q1Wrapper>
                 <div className="faq-answer" >
+                <span className="heading-answer">ROYALTIES</span>
+                <ul>
+                <li>each $hitcoin is minted with an embedded infinite diluting royalty contract which automatically adds secondary owners into the royalty distribution chain upon each sale, in perpetuity.</li>
+                <li><span style={{"text-decoration": "underline"}}>What this Means:</span> if you buy a $hitcoin and then sell it, your wallet hash will be forever added to the royalty distribution list within the smart contract of your $hitcoin.</li>
+                <li>as $hitcoins flip from wallet to wallet, a lineage of owners forms and the royalties from each successive sale of your $hitcoin will be evenly distributed among your growing owner lineage forever.</li>
+                <li>each $hitcoin smart contract contains provisions for 10% of each sale to be awarded as royalties to be distributed equallty among the 4 $hitcoin creators, the holy $hit dao, and the entire chain of secondary owners of a $hitcoin.</li>
+                <li>there are no limits to how many times a $hitcoin can be owned, and a specific $hitcoin can be re-owned by a former owners same wallet, however <span style={{"text-decoration": "underline"}}>an owners wallet can only be added to the royalty distribution list once</span></li>
+                </ul>
 
                 {answers.map((ans)=>{
 
@@ -66,12 +73,13 @@ const Q1 = ()=>{
                 </div>
                 <div className="faq-answer" >
             <div className="heading-answer text-left w-90">NFT tokenomics</div>
+            <div className="d-flex align-items-center justify-content-start w-90">
             <ul>
                 <li>1,111 $hitcoins will be minted<br />3,333 big $hit childen can be produced<br />6,666 $hithead grandchilden can be produced</li>
                 <li>each shitcoin can produce enough offspring to become a lineage of up to 10 active holders.</li>
                 <li>only 11,110 $hitcoin NFTs are possible.</li>
             </ul>
-           
+            </div>
             <div className="heading-answer text-left w-90 mt-5">MINTING</div>
                 <ul>
                     <li>shitcoins mint in 15 traunches:</li>

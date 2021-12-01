@@ -243,7 +243,7 @@ const Hero = (props) => {
         </div>
         <div className="hero-container">
            
-            <h2>$HITCOINS.<span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
+            <h2><span style={{"font-family":"Open Sans"}}>$HITCOINS.</span><span style={{"font-weight": "400","font-style": "italic"}}>CHEAP</span></h2>
             <p className="d-block d-md-none">you’ve never seen shit like this!</p>
             <a href="https://www.twitter.com" target="_blank" style={{"color":"unset","text-decoration": "none","z-index":"111"}}><img src={twitter} className="d-block d-md-none" id="twitter" alt="twitter"  /></a>
             <Button type="small" className="d-block d-md-none">{props.defaultAccount?<span>Wallet Connected</span>:<span onClick={props.connectWalletHandler}>CONNECT WALLET</span>}</Button>

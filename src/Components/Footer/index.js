@@ -25,7 +25,7 @@ const FooterWrapper = styled.div`
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
 	 }
  	p{ 
-	font-size: 25px;
+	font-size: 15px;
 	line-height: 100%; 
 	text-align: center;
 	letter-spacing: 0.05em;

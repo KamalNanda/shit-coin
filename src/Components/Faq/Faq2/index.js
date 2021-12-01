@@ -14,6 +14,7 @@ const image1 = "/assets/images/faq/poop.svg"
 
 
 const Q1Wrapper =  styled.div`
+font-size:18px !important;
 .position{
     display:flex;
     flex-direction:column;
@@ -64,7 +65,7 @@ const Q1Wrapper =  styled.div`
 
 }
 img{
-    width:190px;
+    width:150px;
 }
 @media only screen and (max-width: 768px) {
     font-size: 12px;

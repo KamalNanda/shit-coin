@@ -41,7 +41,7 @@ const Wrapper = styled.div`
     strong{
         font-size: 20px;
         line-height: 24px; 
-        width: 36%;
+        width: 40%;
         @media (max-width:768px){
             width: 90%;
             font-size:15px;
@@ -271,7 +271,7 @@ const About = (props) => {
             
             <div className="d-flex w-100">
                 <div className="black-input">
-                    <input type="email" placeholder="TYPE EMAIL" onChange={handleChange} value={email} />
+                    <input type="email" placeholder="[ TYPE EMAIL ]" onChange={handleChange} value={email} />
                     
                 </div>
                 <div className="black-cross">
